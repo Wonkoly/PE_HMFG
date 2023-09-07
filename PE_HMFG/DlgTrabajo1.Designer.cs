@@ -164,6 +164,7 @@
             this.Font = new System.Drawing.Font("Pokemon Classic", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.Name = "DlgTrabajo1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Trabajo 1";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.DlgTrabajo1_FormClosing);
             this.PnlIzquierdo.ResumeLayout(false);

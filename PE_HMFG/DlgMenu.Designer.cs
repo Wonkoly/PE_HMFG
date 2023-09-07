@@ -105,6 +105,9 @@
             this.LbTrabajo5.Size = new System.Drawing.Size(216, 38);
             this.LbTrabajo5.TabIndex = 28;
             this.LbTrabajo5.Text = "Trabajo 5";
+            this.LbTrabajo5.Click += new System.EventHandler(this.BtnTrabajo5_Click);
+            this.LbTrabajo5.MouseEnter += new System.EventHandler(this.BtnTrabajo5_MouseEnter);
+            this.LbTrabajo5.MouseLeave += new System.EventHandler(this.BtnTrabajo5_MouseLeave);
             // 
             // LbTrabajo4
             // 
@@ -118,6 +121,9 @@
             this.LbTrabajo4.Size = new System.Drawing.Size(216, 38);
             this.LbTrabajo4.TabIndex = 27;
             this.LbTrabajo4.Text = "Trabajo 4";
+            this.LbTrabajo4.Click += new System.EventHandler(this.BtnTrabajo4_Click);
+            this.LbTrabajo4.MouseEnter += new System.EventHandler(this.BtnTrabajo4_MouseEnter);
+            this.LbTrabajo4.MouseLeave += new System.EventHandler(this.BtnTrabajo4_MouseLeave);
             // 
             // LbTrabajo3
             // 
@@ -131,6 +137,9 @@
             this.LbTrabajo3.Size = new System.Drawing.Size(216, 38);
             this.LbTrabajo3.TabIndex = 26;
             this.LbTrabajo3.Text = "Trabajo 3";
+            this.LbTrabajo3.Click += new System.EventHandler(this.BtnTrabajo3_Click);
+            this.LbTrabajo3.MouseEnter += new System.EventHandler(this.BtnTrabajo3_MouseEnter);
+            this.LbTrabajo3.MouseLeave += new System.EventHandler(this.BtnTrabajo3_MouseLeave);
             // 
             // LbTrabajo2
             // 
@@ -144,6 +153,9 @@
             this.LbTrabajo2.Size = new System.Drawing.Size(216, 38);
             this.LbTrabajo2.TabIndex = 25;
             this.LbTrabajo2.Text = "Trabajo 2";
+            this.LbTrabajo2.Click += new System.EventHandler(this.BtnTrabajo2_Click);
+            this.LbTrabajo2.MouseEnter += new System.EventHandler(this.BtnTrabajo2_MouseEnter);
+            this.LbTrabajo2.MouseLeave += new System.EventHandler(this.BtnTrabajo2_MouseLeave);
             // 
             // LbTrabajo1
             // 
@@ -157,6 +169,9 @@
             this.LbTrabajo1.Size = new System.Drawing.Size(204, 38);
             this.LbTrabajo1.TabIndex = 24;
             this.LbTrabajo1.Text = "Trabajo 1";
+            this.LbTrabajo1.Click += new System.EventHandler(this.BtnTrabajo1_Click);
+            this.LbTrabajo1.MouseEnter += new System.EventHandler(this.BtnTrabajo1_MouseEnter);
+            this.LbTrabajo1.MouseLeave += new System.EventHandler(this.BtnTrabajo1_MouseLeave);
             // 
             // BtnTrabajo5
             // 
@@ -168,6 +183,9 @@
             this.BtnTrabajo5.Size = new System.Drawing.Size(620, 89);
             this.BtnTrabajo5.TabIndex = 23;
             this.BtnTrabajo5.TabStop = false;
+            this.BtnTrabajo5.Click += new System.EventHandler(this.BtnTrabajo5_Click);
+            this.BtnTrabajo5.MouseEnter += new System.EventHandler(this.BtnTrabajo5_MouseEnter);
+            this.BtnTrabajo5.MouseLeave += new System.EventHandler(this.BtnTrabajo5_MouseLeave);
             // 
             // BtnTrabajo4
             // 
@@ -178,6 +196,9 @@
             this.BtnTrabajo4.Size = new System.Drawing.Size(620, 89);
             this.BtnTrabajo4.TabIndex = 22;
             this.BtnTrabajo4.TabStop = false;
+            this.BtnTrabajo4.Click += new System.EventHandler(this.BtnTrabajo4_Click);
+            this.BtnTrabajo4.MouseEnter += new System.EventHandler(this.BtnTrabajo4_MouseEnter);
+            this.BtnTrabajo4.MouseLeave += new System.EventHandler(this.BtnTrabajo4_MouseLeave);
             // 
             // BtnTrabajo3
             // 
@@ -188,6 +209,9 @@
             this.BtnTrabajo3.Size = new System.Drawing.Size(620, 89);
             this.BtnTrabajo3.TabIndex = 21;
             this.BtnTrabajo3.TabStop = false;
+            this.BtnTrabajo3.Click += new System.EventHandler(this.BtnTrabajo3_Click);
+            this.BtnTrabajo3.MouseEnter += new System.EventHandler(this.BtnTrabajo3_MouseEnter);
+            this.BtnTrabajo3.MouseLeave += new System.EventHandler(this.BtnTrabajo3_MouseLeave);
             // 
             // BtnTrabajo2
             // 
@@ -198,6 +222,9 @@
             this.BtnTrabajo2.Size = new System.Drawing.Size(620, 89);
             this.BtnTrabajo2.TabIndex = 20;
             this.BtnTrabajo2.TabStop = false;
+            this.BtnTrabajo2.Click += new System.EventHandler(this.BtnTrabajo2_Click);
+            this.BtnTrabajo2.MouseEnter += new System.EventHandler(this.BtnTrabajo2_MouseEnter);
+            this.BtnTrabajo2.MouseLeave += new System.EventHandler(this.BtnTrabajo2_MouseLeave);
             // 
             // BtnTrabajo1
             // 
@@ -209,6 +236,8 @@
             this.BtnTrabajo1.TabIndex = 19;
             this.BtnTrabajo1.TabStop = false;
             this.BtnTrabajo1.Click += new System.EventHandler(this.BtnTrabajo1_Click);
+            this.BtnTrabajo1.MouseEnter += new System.EventHandler(this.BtnTrabajo1_MouseEnter);
+            this.BtnTrabajo1.MouseLeave += new System.EventHandler(this.BtnTrabajo1_MouseLeave);
             // 
             // LbDialogo
             // 
@@ -255,10 +284,10 @@
             this.Controls.Add(this.LbSalir);
             this.Controls.Add(this.BtnSalir);
             this.Controls.Add(this.PkImagen);
-            this.DoubleBuffered = true;
             this.Font = new System.Drawing.Font("Pokemon Classic", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.Name = "DlgMenu";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Menu";
             ((System.ComponentModel.ISupportInitialize)(this.PkImagen)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.BtnSalir)).EndInit();

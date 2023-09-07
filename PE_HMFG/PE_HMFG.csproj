@@ -134,5 +134,8 @@
   <ItemGroup>
     <None Include="Resources\CajaDialogo.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PkDesconocido.gif" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -88,14 +88,105 @@ namespace PE_HMFG
         private void BtnTrabajo1_Click(object sender, EventArgs e)
         {
             LbTrabajo1.ForeColor = Color.Red;
+
             // Verificar si el formulario secundario ya existe
             if (T1 == null || T1.IsDisposed)
             {
                 T1 = new DlgTrabajo1();
-                T1.ShowDialog();
+                T1.Show();
+                this.Hide();
             }
-            
-            this.Hide();
+        }
+        private void BtnTrabajo1_MouseEnter(object sender, EventArgs e)
+        {
+            LbTrabajo1.ForeColor = Color.Gray;
+            LbDialogo.Text = "Este es el trabajo 1";
+            PkImagen.Image = Properties.Resources.PkTrabajo1;
+        }
+        private void BtnTrabajo1_MouseLeave(object sender, EventArgs e)
+        {
+            LbTrabajo1.ForeColor = Color.White;
+            LbDialogo.Text = "...";
+            PkImagen.Image = null;
+        }
+        //
+        //BOTON TRABAJO 2
+        //
+        private void BtnTrabajo2_Click(object sender, EventArgs e)
+        {
+            LbTrabajo2.ForeColor = Color.Red;
+        }
+        private void BtnTrabajo2_MouseEnter(object sender, EventArgs e)
+        {
+            LbTrabajo2.ForeColor = Color.Gray;
+            LbDialogo.Text = "Este es el Trabajo 2";
+            PkImagen.Image = Properties.Resources.PkTrabajo2;
+        }
+        private void BtnTrabajo2_MouseLeave(object sender, EventArgs e)
+        {
+            LbTrabajo2.ForeColor = Color.White;
+            LbDialogo.Text = "...";
+            PkImagen.Image = null;
+        }
+        //
+        //BOTON TRABAJO 3
+        //
+        private void BtnTrabajo3_Click(object sender, EventArgs e)
+        {
+            LbTrabajo3.ForeColor = Color.Red;
+        }
+        private void BtnTrabajo3_MouseEnter(object sender, EventArgs e)
+        {
+            LbTrabajo3.ForeColor = Color.Gray;
+            LbDialogo.Text = "Este es el Trabajo 3";
+            PkImagen.Image = Properties.Resources.PkTrabajo3;
+        }
+        private void BtnTrabajo3_MouseLeave(object sender, EventArgs e)
+        {
+            LbTrabajo3.ForeColor = Color.White;
+            LbDialogo.Text = "...";
+            PkImagen.Image = null;
+        }
+        //
+        //BOTON TRABAJO 4
+        //
+        private void BtnTrabajo4_Click(object sender, EventArgs e)
+        {
+            LbTrabajo4.ForeColor = Color.Red;
+        }
+        private void BtnTrabajo4_MouseEnter(object sender, EventArgs e)
+        {
+            LbTrabajo4.ForeColor= Color.Gray;
+            LbDialogo.Text = "Este seria el Trabajo 4, xd.";
+            PkImagen.Image = Properties.Resources.PkDesconocido;
+        }
+        private void BtnTrabajo4_MouseLeave(object sender, EventArgs e)
+        {
+            LbTrabajo4.ForeColor = Color.White;
+            LbDialogo.Text= "...";
+            PkImagen.Image = null;
+        }
+        //
+        //BOTON TRABAJO 5
+        //
+        private void BtnTrabajo5_Click(object sender, EventArgs e)
+        {
+            LbTrabajo5.ForeColor = Color.Red;
+            LbDialogo.Text = "Este seria el Trabajo 5, xd.";
+        }
+
+        private void BtnTrabajo5_MouseEnter(object sender, EventArgs e)
+        {
+            LbTrabajo5.ForeColor = Color.Gray;
+            LbDialogo.Text = "Este seria el Trabajo 5, xd.";
+            PkImagen.Image = Properties.Resources.PkDesconocido;
+        }
+
+        private void BtnTrabajo5_MouseLeave(object sender, EventArgs e)
+        {
+            LbTrabajo5.ForeColor = Color.White;
+            LbDialogo.Text = "...";
+            PkImagen.Image = null;
         }
     }       
 }   

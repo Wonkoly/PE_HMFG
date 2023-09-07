@@ -183,6 +183,16 @@ namespace PE_HMFG.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap PkDesconocido {
+            get {
+                object obj = ResourceManager.GetObject("PkDesconocido", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap PkTrabajo1 {
             get {
                 object obj = ResourceManager.GetObject("PkTrabajo1", resourceCulture);
