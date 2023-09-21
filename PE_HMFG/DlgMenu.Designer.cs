@@ -245,7 +245,7 @@
             this.LbDialogo.BackColor = System.Drawing.Color.White;
             this.LbDialogo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.LbDialogo.Font = new System.Drawing.Font("Pokemon Classic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LbDialogo.Location = new System.Drawing.Point(54, 579);
+            this.LbDialogo.Location = new System.Drawing.Point(54, 570);
             this.LbDialogo.Name = "LbDialogo";
             this.LbDialogo.Size = new System.Drawing.Size(53, 38);
             this.LbDialogo.TabIndex = 30;
@@ -284,11 +284,13 @@
             this.Controls.Add(this.LbSalir);
             this.Controls.Add(this.BtnSalir);
             this.Controls.Add(this.PkImagen);
+            this.DoubleBuffered = true;
             this.Font = new System.Drawing.Font("Pokemon Classic", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.Name = "DlgMenu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Menu";
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.DlgMenu_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.PkImagen)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.BtnSalir)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.BtnTrabajo5)).EndInit();

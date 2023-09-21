@@ -28,32 +28,39 @@ namespace PE_HMFG
             InitializeComponent();
             //-----------------------------------------------------------------
             //CONFIGURACION DE LOS BOTONES AL INICIAR
+            //-----------------------------------------------------------------
             BtnSalir.Image = Properties.Resources.BtnSalir;
+            BtnSalir.TabStop = true;
             LbSalir.Parent = BtnSalir;
             LbSalir.BackColor = Color.Transparent;
             LbSalir.Location = new Point(100, 23);
 
             BtnTrabajo1.Image = Properties.Resources.BtnTrabajo1_1;
+            BtnTrabajo1.TabStop = true;
             LbTrabajo1.Parent = BtnTrabajo1;
             LbTrabajo1.BackColor = Color.Transparent;
             LbTrabajo1.Location = new Point(125, 22);
 
             BtnTrabajo2.Image = Properties.Resources.BtnTrabajo2_1;
+            BtnTrabajo2.TabStop = true;
             LbTrabajo2.Parent = BtnTrabajo2;
             LbTrabajo2.BackColor = Color.Transparent;
             LbTrabajo2.Location = new Point(125, 22);
 
             BtnTrabajo3.Image = Properties.Resources.BtnTrabajo3_1;
+            BtnTrabajo3.TabStop = true;
             LbTrabajo3.Parent = BtnTrabajo3;
             LbTrabajo3.BackColor = Color.Transparent;
             LbTrabajo3.Location = new Point(125, 22);
 
             BtnTrabajo4.Image = Properties.Resources.BtnTrabajo;
+            BtnTrabajo4.TabStop = true;
             LbTrabajo4.Parent = BtnTrabajo4;
             LbTrabajo4.BackColor = Color.Transparent;
             LbTrabajo4.Location = new Point(125, 22);
 
             BtnTrabajo5.Image = Properties.Resources.BtnTrabajo;
+            BtnTrabajo5.TabStop = true;
             LbTrabajo5.Parent = BtnTrabajo5;
             LbTrabajo5.BackColor = Color.Transparent;
             LbTrabajo5.Location = new Point(125, 22);
@@ -61,12 +68,14 @@ namespace PE_HMFG
             CajaDialogo.Image = Properties.Resources.CajaDialogo;
             LbDialogo.Parent = CajaDialogo;
             LbDialogo.BackColor = Color.Transparent;
-            LbDialogo.Location = new Point(35, 60);
+            LbDialogo.Location = new Point(35, 50);
+
+            this.KeyPreview = true;
 
         }
-        //
+        //-----------------------------------------------------------------
         //BOTON SALIR
-        //
+        //-----------------------------------------------------------------
         private void BtnSalir_Click(object sender, EventArgs e)
         {
             LbSalir.ForeColor = Color.Red;
@@ -82,9 +91,9 @@ namespace PE_HMFG
             LbSalir.ForeColor = Color.White;
             LbDialogo.Text = "...";
         }
-        //
+        //-----------------------------------------------------------------
         //BOTON TRABAJO 1
-        //
+        //-----------------------------------------------------------------
         private void BtnTrabajo1_Click(object sender, EventArgs e)
         {
             LbTrabajo1.ForeColor = Color.Red;
@@ -102,10 +111,12 @@ namespace PE_HMFG
             LbTrabajo1.ForeColor = Color.Gray;
             LbDialogo.Text = "Este es el trabajo 1";
             PkImagen.Image = Properties.Resources.PkTrabajo1;
+            BtnTrabajo1.Image = Properties.Resources.BtnTrabajo1_2;
         }
         private void BtnTrabajo1_MouseLeave(object sender, EventArgs e)
         {
             LbTrabajo1.ForeColor = Color.White;
+            BtnTrabajo1.Image = Properties.Resources.BtnTrabajo1_1;
             LbDialogo.Text = "...";
             PkImagen.Image = null;
         }
@@ -121,10 +132,12 @@ namespace PE_HMFG
             LbTrabajo2.ForeColor = Color.Gray;
             LbDialogo.Text = "Este es el Trabajo 2";
             PkImagen.Image = Properties.Resources.PkTrabajo2;
+            BtnTrabajo2.Image = Properties.Resources.BtnTrabajo2_2;
         }
         private void BtnTrabajo2_MouseLeave(object sender, EventArgs e)
         {
             LbTrabajo2.ForeColor = Color.White;
+            BtnTrabajo2.Image = Properties.Resources.BtnTrabajo2_1;
             LbDialogo.Text = "...";
             PkImagen.Image = null;
         }
@@ -140,10 +153,12 @@ namespace PE_HMFG
             LbTrabajo3.ForeColor = Color.Gray;
             LbDialogo.Text = "Este es el Trabajo 3";
             PkImagen.Image = Properties.Resources.PkTrabajo3;
+            BtnTrabajo3.Image = Properties.Resources.BtnTrabajo3_2;
         }
         private void BtnTrabajo3_MouseLeave(object sender, EventArgs e)
         {
             LbTrabajo3.ForeColor = Color.White;
+            BtnTrabajo3.Image = Properties.Resources.BtnTrabajo3_1;
             LbDialogo.Text = "...";
             PkImagen.Image = null;
         }
@@ -187,6 +202,24 @@ namespace PE_HMFG
             LbTrabajo5.ForeColor = Color.White;
             LbDialogo.Text = "...";
             PkImagen.Image = null;
+        }
+
+        private void DlgMenu_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                // Cambia el foco al siguiente control
+                if (BtnTrabajo1.Focused)
+                {
+                    BtnTrabajo1.Focus();
+                    BtnTrabajo1_MouseEnter(sender, e);
+                }
+                else if (BtnTrabajo1.Focused)
+                {
+                    BtnTrabajo2.Focus();
+                    BtnTrabajo2_MouseEnter(sender, e);
+                }
+            }
         }
     }       
 }   

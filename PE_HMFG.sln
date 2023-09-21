@@ -7,14 +7,16 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PE_HMFG", "PE_HMFG\PE_HMFG.
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Dbg|Any CPU = Dbg|Any CPU
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{6604B3C7-147B-4534-928F-55BDCD9D2FDF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{6604B3C7-147B-4534-928F-55BDCD9D2FDF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6604B3C7-147B-4534-928F-55BDCD9D2FDF}.Dbg|Any CPU.ActiveCfg = Dbg|Any CPU
+		{6604B3C7-147B-4534-928F-55BDCD9D2FDF}.Dbg|Any CPU.Build.0 = Dbg|Any CPU
+		{6604B3C7-147B-4534-928F-55BDCD9D2FDF}.Debug|Any CPU.ActiveCfg = Release|Any CPU
+		{6604B3C7-147B-4534-928F-55BDCD9D2FDF}.Debug|Any CPU.Build.0 = Release|Any CPU
 		{6604B3C7-147B-4534-928F-55BDCD9D2FDF}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{6604B3C7-147B-4534-928F-55BDCD9D2FDF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
