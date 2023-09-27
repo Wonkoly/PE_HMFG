@@ -101,16 +101,63 @@ namespace PE_HMFG
             DgvTablaDinamica.Rows.Clear();
             DgvTablaDinamica.Columns.Clear();
 
-            if (NumColumnas.Value == 0)
+            int fila = 0, columna = 0, totalD1 = 0, totalD2 = 0;
+
+            //Crear un generador de números aleatorios "Random"
+            Random random = new Random();
+
+            if (NumColumnas.Value == NumFilas.Value)
             {
-                return;
+                if (NumColumnas.Value == 0 && NumFilas.Value == 0)
+                {
+                    return;
+                }
+
+                //Crear tabla "Matriz"
+
+                for (int i = 1; i <= NumColumnas.Value; i++)
+                {
+                    DgvTablaDinamica.Columns.Add("Col" + i.ToString(), "x" + i.ToString());
+                }
+                DgvTablaDinamica.Rows.Add((int)NumFilas.Value);
+
+                //Llenar Filas y generar números aleatorios
+
+                while (fila < NumColumnas.Value)
+                {
+                    columna = 0;
+                    while (columna < NumColumnas.Value)
+                    {
+                        int NumeroAleatorio = random.Next(0, 9);
+                        DgvTablaDinamica.Rows[fila].Cells[columna].Value = NumeroAleatorio.ToString();
+
+                        // Sumar la diagonal principal (de arriba izquierda a abajo derecha)
+                        if (fila == columna)
+                        {
+                            DgvTablaDinamica.Rows[fila].Cells[columna].Style.BackColor = Color.Aqua;
+                            totalD1 += NumeroAleatorio;
+                        }
+
+                        // Sumar la diagonal inversa (de arriba derecha a abajo izquierda)
+                        if (fila + columna == NumColumnas.Value - 1)
+                        {
+                            DgvTablaDinamica.Rows[fila].Cells[columna].Style.BackColor = Color.Red;
+                            totalD2 += NumeroAleatorio;
+                        }
+
+                        columna++;
+                    }
+                    fila++;
+                }
+
+                MessageBox.Show($"La suma de la diagonal Azul es: {totalD1}\nLa suma de la diagonal Roja es: {totalD2}", "Respuesta");
+            }
+            else
+            {
+                MessageBox.Show("Los números no son equivalentes", "Error");
             }
 
-            for (int i = 1; i <= NumColumnas.Value; i++)
-            {
-                DgvTablaDinamica.Columns.Add("Col" + i.ToString(), "X" + i.ToString());
-            }
-            DgvTablaDinamica.Rows.Add((int)NumFilas.Value);
+
 
         }
         private void LimpiarTablas()
