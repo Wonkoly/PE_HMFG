@@ -41,6 +41,8 @@
             this.ColApellidoP = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColApellidoM = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PnlArriba = new System.Windows.Forms.Panel();
+            this.LbTotalRojo = new System.Windows.Forms.Label();
+            this.LbTotalAzul = new System.Windows.Forms.Label();
             this.LbSalirT1 = new System.Windows.Forms.Label();
             this.BtnSalirT1 = new System.Windows.Forms.PictureBox();
             this.CheckB = new System.Windows.Forms.CheckBox();
@@ -198,6 +200,8 @@
             // PnlArriba
             // 
             this.PnlArriba.BackColor = System.Drawing.Color.DarkCyan;
+            this.PnlArriba.Controls.Add(this.LbTotalRojo);
+            this.PnlArriba.Controls.Add(this.LbTotalAzul);
             this.PnlArriba.Controls.Add(this.LbSalirT1);
             this.PnlArriba.Controls.Add(this.BtnSalirT1);
             this.PnlArriba.Controls.Add(this.CheckB);
@@ -212,6 +216,24 @@
             this.PnlArriba.Name = "PnlArriba";
             this.PnlArriba.Size = new System.Drawing.Size(742, 150);
             this.PnlArriba.TabIndex = 4;
+            // 
+            // LbTotalRojo
+            // 
+            this.LbTotalRojo.AutoSize = true;
+            this.LbTotalRojo.Location = new System.Drawing.Point(358, 74);
+            this.LbTotalRojo.Name = "LbTotalRojo";
+            this.LbTotalRojo.Size = new System.Drawing.Size(0, 21);
+            this.LbTotalRojo.TabIndex = 21;
+            this.LbTotalRojo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // LbTotalAzul
+            // 
+            this.LbTotalAzul.AutoSize = true;
+            this.LbTotalAzul.Location = new System.Drawing.Point(368, 33);
+            this.LbTotalAzul.Name = "LbTotalAzul";
+            this.LbTotalAzul.Size = new System.Drawing.Size(0, 21);
+            this.LbTotalAzul.TabIndex = 20;
+            this.LbTotalAzul.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // LbSalirT1
             // 
@@ -398,7 +420,7 @@
             // 
             this.CheckTablaDinamica.AutoSize = true;
             this.CheckTablaDinamica.ForeColor = System.Drawing.Color.DarkGray;
-            this.CheckTablaDinamica.Location = new System.Drawing.Point(8, 293);
+            this.CheckTablaDinamica.Location = new System.Drawing.Point(24, 293);
             this.CheckTablaDinamica.Name = "CheckTablaDinamica";
             this.CheckTablaDinamica.Size = new System.Drawing.Size(186, 25);
             this.CheckTablaDinamica.TabIndex = 29;
@@ -410,7 +432,7 @@
             // 
             this.CheckTablaWhile.AutoSize = true;
             this.CheckTablaWhile.ForeColor = System.Drawing.Color.DarkGray;
-            this.CheckTablaWhile.Location = new System.Drawing.Point(8, 262);
+            this.CheckTablaWhile.Location = new System.Drawing.Point(24, 262);
             this.CheckTablaWhile.Name = "CheckTablaWhile";
             this.CheckTablaWhile.Size = new System.Drawing.Size(145, 25);
             this.CheckTablaWhile.TabIndex = 28;
@@ -440,7 +462,7 @@
             // 
             this.CheckTablaPrincipal.AutoSize = true;
             this.CheckTablaPrincipal.ForeColor = System.Drawing.Color.DarkGray;
-            this.CheckTablaPrincipal.Location = new System.Drawing.Point(8, 231);
+            this.CheckTablaPrincipal.Location = new System.Drawing.Point(24, 231);
             this.CheckTablaPrincipal.Name = "CheckTablaPrincipal";
             this.CheckTablaPrincipal.Size = new System.Drawing.Size(189, 25);
             this.CheckTablaPrincipal.TabIndex = 26;
@@ -544,5 +566,7 @@
         private System.Windows.Forms.Label LbColumnas;
         private System.Windows.Forms.GroupBox GbxOpcionesTablaDinamica;
         private System.Windows.Forms.Button BtnLlenarTablaExtremo;
+        private System.Windows.Forms.Label LbTotalRojo;
+        private System.Windows.Forms.Label LbTotalAzul;
     }
 }

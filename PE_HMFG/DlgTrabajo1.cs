@@ -101,7 +101,7 @@ namespace PE_HMFG
             DgvTablaDinamica.Rows.Clear();
             DgvTablaDinamica.Columns.Clear();
 
-            int fila = 0, columna = 0, totalD1 = 0, totalD2 = 0;
+            int fila = 0, columna = 0, totalD1 = 0, totalD2 = 0, totalPares = 0, totalImpares = 0;
 
             //Crear un generador de números aleatorios "Random"
             Random random = new Random();
@@ -131,6 +131,14 @@ namespace PE_HMFG
                         int NumeroAleatorio = random.Next(0, 9);
                         DgvTablaDinamica.Rows[fila].Cells[columna].Value = NumeroAleatorio.ToString();
 
+                        if (NumeroAleatorio % 2 == 0)
+                        {
+                            totalPares += NumeroAleatorio;
+                        }
+                        else
+                        {
+                            totalImpares += NumeroAleatorio; 
+                        } 
                         // Sumar la diagonal principal (de arriba izquierda a abajo derecha)
                         if (fila == columna)
                         {
@@ -150,15 +158,18 @@ namespace PE_HMFG
                     fila++;
                 }
 
-                MessageBox.Show($"La suma de la diagonal Azul es: {totalD1}\nLa suma de la diagonal Roja es: {totalD2}", "Respuesta");
+                //MessageBox.Show($"La suma de la diagonal Azul es: {totalD1}\nLa suma de la diagonal Roja es: {totalD2}\n" +
+                //    $"Total de numeros Pares {totalPares}\n" +
+                //    $"Total de numeros Imapres {totalImpares}", "Respuesta");
+
+                LbTotalAzul.Text = "Total Pares\n" + totalPares;
+                LbTotalRojo.Text = "Total Impares\n" + totalImpares;
+                
             }
             else
             {
                 MessageBox.Show("Los números no son equivalentes", "Error");
             }
-
-
-
         }
         private void LimpiarTablas()
         {
@@ -300,6 +311,11 @@ namespace PE_HMFG
         private void BtnnLimpiarTabla_Click(object sender, EventArgs e)
         {
             LimpiarTablas();
+            if (CheckTablaDinamica.Checked)
+            {
+                LbTotalRojo.Text = "";
+                LbTotalAzul.Text = "";
+            }
         }
 
         //-------------------------------------------------------------------------
