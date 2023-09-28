@@ -22,6 +22,7 @@ namespace PE_HMFG
 
         //VENTANAS
         DlgTrabajo1 T1;
+        DlgTrabajo2 T2;
 
         public DlgMenu()
         {
@@ -126,6 +127,14 @@ namespace PE_HMFG
         private void BtnTrabajo2_Click(object sender, EventArgs e)
         {
             LbTrabajo2.ForeColor = Color.Red;
+
+            // Verificar si el formulario secundario ya existe
+            if (T2 == null || T2.IsDisposed)
+            {
+                T2 = new DlgTrabajo2();
+                T2.Show();
+                this.Hide();
+            }
         }
         private void BtnTrabajo2_MouseEnter(object sender, EventArgs e)
         {
