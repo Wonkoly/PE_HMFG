@@ -32,15 +32,8 @@ namespace PE_HMFG
 
             //-----------------------------------------------------------------
             //CONFIGURACION TABLAS - Ocultar
-            DgvTablaPrincipal.Visible = false;
-            DgvTablaWhile.Visible = false;
-            DgvTablaDinamica.Visible = false;
+            DesabilitarControles();           
             
-            //-----------------------------------------------------------------
-            //CONFIGURACION TABLA DINAMICA - Ocultar configuracion
-            GbxOpcionesTablaDinamica.Visible = false;
-
-
         }
 
         //-------------------------------------------------------------------------
@@ -78,23 +71,19 @@ namespace PE_HMFG
 
         private void LlenarTablaWhile()
         {
+            DgvTablaWhile.Rows.Clear();
             int i = 0;
-            DgvTablaWhile.Rows.Add(4);
-
             while (i < 4)
             {
+                DgvTablaWhile.Rows.Add();   
                 int j = 0;
-
                 while (j < 4)
                 {
-
                     DgvTablaWhile.Rows[i].Cells[j].Value = i.ToString() + "," + j.ToString();
                     j++;
                 }
-
                 i++;
             }
-
         }
         private void LlenarTablaDinamica()
         {
@@ -130,15 +119,17 @@ namespace PE_HMFG
                     {
                         int NumeroAleatorio = random.Next(0, 9);
                         DgvTablaDinamica.Rows[fila].Cells[columna].Value = NumeroAleatorio.ToString();
-
-                        if (NumeroAleatorio % 2 == 0)
+                        //int numA = (int)DgvTablaDinamica.Rows[fila].Cells[columna].Value;
+                        int numA = int.Parse(DgvTablaDinamica.Rows[fila].Cells[columna].Value.ToString());
+                        if (numA % 2 == 0)
                         {
-                            totalPares += NumeroAleatorio;
+                            totalPares += numA;
                         }
                         else
                         {
-                            totalImpares += NumeroAleatorio; 
-                        } 
+                            totalImpares += numA; 
+                        }
+
                         // Sumar la diagonal principal (de arriba izquierda a abajo derecha)
                         if (fila == columna)
                         {
@@ -152,19 +143,12 @@ namespace PE_HMFG
                             DgvTablaDinamica.Rows[fila].Cells[columna].Style.BackColor = Color.Red;
                             totalD2 += NumeroAleatorio;
                         }
-
                         columna++;
                     }
                     fila++;
                 }
-
-                //MessageBox.Show($"La suma de la diagonal Azul es: {totalD1}\nLa suma de la diagonal Roja es: {totalD2}\n" +
-                //    $"Total de numeros Pares {totalPares}\n" +
-                //    $"Total de numeros Imapres {totalImpares}", "Respuesta");
-
                 LbTotalAzul.Text = "Total Pares\n" + totalPares;
                 LbTotalRojo.Text = "Total Impares\n" + totalImpares;
-                
             }
             else
             {
@@ -209,6 +193,24 @@ namespace PE_HMFG
         private void BtnSalirT1_MouseLeave(object sender, EventArgs e)
         {
             LbSalirT1.ForeColor = Color.White;
+        } 
+        //-------------------------------------------------------------------------
+        //CHECK BOXS TABLAS - Mostrar tablas
+        //-------------------------------------------------------------------------
+        private void DesabilitarControles()
+        {
+            //Tablas
+            DgvTablaPrincipal.Visible = false;
+            DgvTablaWhile.Visible = false;
+            DgvTablaDinamica.Visible = false;
+
+            //Botones de Opciones
+            GbxOpcionesTablaDinamica.Visible = false;
+            LbColumnas.Visible = false;
+            NumColumnas.Visible = false;
+            LbFilas.Visible = false;
+            NumFilas.Visible = false;
+            BtnLlenarTablaExtremo.Visible = false;
         }
         //-------------------------------------------------------------------------
         //CHECK BOXS TABLAS - Mostrar tablas
@@ -217,69 +219,50 @@ namespace PE_HMFG
         {
             if (CheckTablaPrincipal.Checked)
             {
-                CheckTablaWhile.Checked = false;
                 CheckTablaDinamica.Checked = false;
+                CheckTablaWhile.Checked = false;
+                DgvTablaPrincipal.Visible = true;
+
+                GbxOpcionesTablaDinamica.Visible = true;
+                BtnLlenarTablaExtremo.Visible = true;
             }
-
-            //Mostrar tablas
-            DgvTablaDinamica.Visible = false;
-            DgvTablaPrincipal.Visible = true;
-            DgvTablaWhile.Visible = false;
-
-            //Limpiar tablas
-            LimpiarTablas();
-
-            //Habilitar Botones de Opciones
-            GbxOpcionesTablaDinamica.Visible = true;
-            LbColumnas.Visible = false;
-            NumColumnas.Visible = false;
-            LbFilas.Visible = false;
-            NumFilas.Visible = false;
-            BtnLlenarTablaExtremo.Visible = true;
-
+            else
+            {
+                DesabilitarControles();
+            }
         }
         private void CheckTablaWhile_CheckedChanged(object sender, EventArgs e)
         {
             if (CheckTablaWhile.Checked)
             {
-                CheckTablaPrincipal.Checked = false;
                 CheckTablaDinamica.Checked = false;
+                CheckTablaPrincipal.Checked = false;
+                DgvTablaWhile.Visible = true;
+                
             }
-
-            //Mostrar tablas
-            DgvTablaDinamica.Visible = false;
-            DgvTablaPrincipal.Visible = false;
-            DgvTablaWhile.Visible = true;
-
-            //Borrar tablas
-            LimpiarTablas();
-
-            //Habilitar botones
-            GbxOpcionesTablaDinamica.Visible = false;
-
+            else
+            {
+                DesabilitarControles();
+            }
         }
         private void CheckTablaDinamica_CheckedChanged(object sender, EventArgs e)
         {
             if (CheckTablaDinamica.Checked)
             {
-                CheckTablaWhile.Checked = false;
                 CheckTablaPrincipal.Checked = false;
+                CheckTablaWhile.Checked = false;
+                DgvTablaDinamica.Visible = true;
+
+                GbxOpcionesTablaDinamica.Visible = true;
+                LbColumnas.Visible = true;
+                NumColumnas.Visible = true;
+                LbFilas.Visible = true;
+                NumFilas.Visible = true;
             }
-
-            //Mostrar tablas
-            DgvTablaDinamica.Visible = true;
-            DgvTablaPrincipal.Visible = false;
-            DgvTablaWhile.Visible = false;
-
-            //Borrar tabla
-            LimpiarTablas();
-
-            //habilitar botones
-            GbxOpcionesTablaDinamica.Visible = true;
-            
-            NumColumnas.Visible = true;
-            NumFilas.Visible = true;
-            BtnLlenarTablaExtremo.Visible = false;
+            else
+            {
+                DesabilitarControles();
+            }
         }
 
         //-------------------------------------------------------------------------
@@ -338,7 +321,6 @@ namespace PE_HMFG
                 DgvTablaPrincipal.FirstDisplayedScrollingRowIndex = DgvTablaPrincipal.Rows.Count - 1;
                 DgvTablaPrincipal.Refresh();
             }
-
         }
     }
 }
