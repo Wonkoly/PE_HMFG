@@ -12,9 +12,8 @@ namespace PE_HMFG
 {
     //-------------------------------------------------------------------------
     //CLASE MENU
-    //
+    //Fernando Gael Hernandez Magana
     //-------------------------------------------------------------------------
-
     public partial class DlgMenu : Form
     {
         //-------------------------------------------------------------------------
@@ -72,7 +71,6 @@ namespace PE_HMFG
             LbDialogo.Location = new Point(35, 50);
 
             this.KeyPreview = true;
-
         }
         //-----------------------------------------------------------------
         //BOTON SALIR
@@ -110,7 +108,7 @@ namespace PE_HMFG
         private void BtnTrabajo1_MouseEnter(object sender, EventArgs e)
         {
             LbTrabajo1.ForeColor = Color.Gray;
-            LbDialogo.Text = "Este es el trabajo 1";
+            LbDialogo.Text = "Practica de Tablas con For y While.";
             PkImagen.Image = Properties.Resources.PkTrabajo1;
             BtnTrabajo1.Image = Properties.Resources.BtnTrabajo1_2;
         }
@@ -198,21 +196,18 @@ namespace PE_HMFG
             LbTrabajo5.ForeColor = Color.Red;
             LbDialogo.Text = "Este seria el Trabajo 5, xd.";
         }
-
         private void BtnTrabajo5_MouseEnter(object sender, EventArgs e)
         {
             LbTrabajo5.ForeColor = Color.Gray;
             LbDialogo.Text = "Este seria el Trabajo 5, xd.";
             PkImagen.Image = Properties.Resources.PkDesconocido;
         }
-
         private void BtnTrabajo5_MouseLeave(object sender, EventArgs e)
         {
             LbTrabajo5.ForeColor = Color.White;
             LbDialogo.Text = "...";
             PkImagen.Image = null;
         }
-
         private void DlgMenu_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)

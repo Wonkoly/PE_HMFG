@@ -41,8 +41,11 @@
             this.ColApellidoP = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColApellidoM = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PnlArriba = new System.Windows.Forms.Panel();
-            this.LbTotalRojo = new System.Windows.Forms.Label();
-            this.LbTotalAzul = new System.Windows.Forms.Label();
+            this.GbxSumaTotal = new System.Windows.Forms.GroupBox();
+            this.LbSumaTotal4 = new System.Windows.Forms.Label();
+            this.LbSumaTotal3 = new System.Windows.Forms.Label();
+            this.LbSumaTotal2 = new System.Windows.Forms.Label();
+            this.LbSumaTotal1 = new System.Windows.Forms.Label();
             this.LbSalirT1 = new System.Windows.Forms.Label();
             this.BtnSalirT1 = new System.Windows.Forms.PictureBox();
             this.CheckB = new System.Windows.Forms.CheckBox();
@@ -69,6 +72,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.DgvTablaWhile)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DgvTablaPrincipal)).BeginInit();
             this.PnlArriba.SuspendLayout();
+            this.GbxSumaTotal.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.BtnSalirT1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.NumFilas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.NumColumnas)).BeginInit();
@@ -200,8 +204,7 @@
             // PnlArriba
             // 
             this.PnlArriba.BackColor = System.Drawing.Color.DarkCyan;
-            this.PnlArriba.Controls.Add(this.LbTotalRojo);
-            this.PnlArriba.Controls.Add(this.LbTotalAzul);
+            this.PnlArriba.Controls.Add(this.GbxSumaTotal);
             this.PnlArriba.Controls.Add(this.LbSalirT1);
             this.PnlArriba.Controls.Add(this.BtnSalirT1);
             this.PnlArriba.Controls.Add(this.CheckB);
@@ -217,23 +220,62 @@
             this.PnlArriba.Size = new System.Drawing.Size(742, 150);
             this.PnlArriba.TabIndex = 4;
             // 
-            // LbTotalRojo
+            // GbxSumaTotal
             // 
-            this.LbTotalRojo.AutoSize = true;
-            this.LbTotalRojo.Location = new System.Drawing.Point(358, 74);
-            this.LbTotalRojo.Name = "LbTotalRojo";
-            this.LbTotalRojo.Size = new System.Drawing.Size(0, 21);
-            this.LbTotalRojo.TabIndex = 21;
-            this.LbTotalRojo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.GbxSumaTotal.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.GbxSumaTotal.Controls.Add(this.LbSumaTotal4);
+            this.GbxSumaTotal.Controls.Add(this.LbSumaTotal3);
+            this.GbxSumaTotal.Controls.Add(this.LbSumaTotal2);
+            this.GbxSumaTotal.Controls.Add(this.LbSumaTotal1);
+            this.GbxSumaTotal.ForeColor = System.Drawing.Color.White;
+            this.GbxSumaTotal.Location = new System.Drawing.Point(295, 3);
+            this.GbxSumaTotal.Name = "GbxSumaTotal";
+            this.GbxSumaTotal.Size = new System.Drawing.Size(213, 140);
+            this.GbxSumaTotal.TabIndex = 22;
+            this.GbxSumaTotal.TabStop = false;
+            this.GbxSumaTotal.Text = "Suma Total";
             // 
-            // LbTotalAzul
+            // LbSumaTotal4
             // 
-            this.LbTotalAzul.AutoSize = true;
-            this.LbTotalAzul.Location = new System.Drawing.Point(368, 33);
-            this.LbTotalAzul.Name = "LbTotalAzul";
-            this.LbTotalAzul.Size = new System.Drawing.Size(0, 21);
-            this.LbTotalAzul.TabIndex = 20;
-            this.LbTotalAzul.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LbSumaTotal4.AutoSize = true;
+            this.LbSumaTotal4.Location = new System.Drawing.Point(7, 97);
+            this.LbSumaTotal4.Name = "LbSumaTotal4";
+            this.LbSumaTotal4.Size = new System.Drawing.Size(31, 21);
+            this.LbSumaTotal4.TabIndex = 23;
+            this.LbSumaTotal4.Text = "...";
+            this.LbSumaTotal4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // LbSumaTotal3
+            // 
+            this.LbSumaTotal3.AutoSize = true;
+            this.LbSumaTotal3.Location = new System.Drawing.Point(7, 76);
+            this.LbSumaTotal3.Name = "LbSumaTotal3";
+            this.LbSumaTotal3.Size = new System.Drawing.Size(31, 21);
+            this.LbSumaTotal3.TabIndex = 22;
+            this.LbSumaTotal3.Text = "...";
+            this.LbSumaTotal3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // LbSumaTotal2
+            // 
+            this.LbSumaTotal2.AutoSize = true;
+            this.LbSumaTotal2.Location = new System.Drawing.Point(7, 55);
+            this.LbSumaTotal2.Name = "LbSumaTotal2";
+            this.LbSumaTotal2.Size = new System.Drawing.Size(31, 21);
+            this.LbSumaTotal2.TabIndex = 21;
+            this.LbSumaTotal2.Text = "...";
+            this.LbSumaTotal2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // LbSumaTotal1
+            // 
+            this.LbSumaTotal1.AutoSize = true;
+            this.LbSumaTotal1.Location = new System.Drawing.Point(7, 34);
+            this.LbSumaTotal1.Name = "LbSumaTotal1";
+            this.LbSumaTotal1.Size = new System.Drawing.Size(31, 21);
+            this.LbSumaTotal1.TabIndex = 20;
+            this.LbSumaTotal1.Text = "...";
+            this.LbSumaTotal1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // LbSalirT1
             // 
@@ -270,7 +312,7 @@
             // 
             this.CheckB.AutoSize = true;
             this.CheckB.ForeColor = System.Drawing.Color.White;
-            this.CheckB.Location = new System.Drawing.Point(234, 46);
+            this.CheckB.Location = new System.Drawing.Point(188, 46);
             this.CheckB.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.CheckB.Name = "CheckB";
             this.CheckB.Size = new System.Drawing.Size(18, 17);
@@ -279,7 +321,7 @@
             // 
             // BtnAgregar
             // 
-            this.BtnAgregar.Location = new System.Drawing.Point(234, 96);
+            this.BtnAgregar.Location = new System.Drawing.Point(188, 96);
             this.BtnAgregar.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.BtnAgregar.Name = "BtnAgregar";
             this.BtnAgregar.Size = new System.Drawing.Size(99, 36);
@@ -317,7 +359,7 @@
             this.TbCampo1.Location = new System.Drawing.Point(22, 40);
             this.TbCampo1.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.TbCampo1.Name = "TbCampo1";
-            this.TbCampo1.Size = new System.Drawing.Size(202, 29);
+            this.TbCampo1.Size = new System.Drawing.Size(156, 29);
             this.TbCampo1.TabIndex = 1;
             // 
             // CbLista
@@ -329,7 +371,7 @@
             this.CbLista.Location = new System.Drawing.Point(22, 101);
             this.CbLista.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.CbLista.Name = "CbLista";
-            this.CbLista.Size = new System.Drawing.Size(202, 29);
+            this.CbLista.Size = new System.Drawing.Size(156, 29);
             this.CbLista.TabIndex = 0;
             // 
             // NumFilas
@@ -519,6 +561,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.DgvTablaPrincipal)).EndInit();
             this.PnlArriba.ResumeLayout(false);
             this.PnlArriba.PerformLayout();
+            this.GbxSumaTotal.ResumeLayout(false);
+            this.GbxSumaTotal.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.BtnSalirT1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.NumFilas)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.NumColumnas)).EndInit();
@@ -566,7 +610,10 @@
         private System.Windows.Forms.Label LbColumnas;
         private System.Windows.Forms.GroupBox GbxOpcionesTablaDinamica;
         private System.Windows.Forms.Button BtnLlenarTablaExtremo;
-        private System.Windows.Forms.Label LbTotalRojo;
-        private System.Windows.Forms.Label LbTotalAzul;
+        private System.Windows.Forms.Label LbSumaTotal2;
+        private System.Windows.Forms.Label LbSumaTotal1;
+        private System.Windows.Forms.GroupBox GbxSumaTotal;
+        private System.Windows.Forms.Label LbSumaTotal4;
+        private System.Windows.Forms.Label LbSumaTotal3;
     }
 }

@@ -35,7 +35,39 @@ namespace PE_HMFG
             DesabilitarControles();           
             
         }
-
+        //-------------------------------------------------------------------------
+        //FUNCION PARA SALIR DEL PROGRAMA
+        //-------------------------------------------------------------------------
+        public void CerrarVentana()
+        {
+            // Mostrar el formulario principal nuevamente
+            if (Application.OpenForms.Count > 0)//Checamos si exixten formularios abiertos
+            {   
+                //Agarramos una referencia del primer formulario y lo asignamos a un objeto similar.
+                DlgMenu Menu = Application.OpenForms[0] as DlgMenu;
+                Menu.Show();
+            }
+        }
+        private void DlgTrabajo1_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            CerrarVentana();
+        }
+        //-------------------------------------------------------------------------
+        //BOTON SALIR 
+        //-------------------------------------------------------------------------
+        private void BtnSalirT1_Click(object sender, EventArgs e)
+        {
+            CerrarVentana();
+            this.Close();
+        }
+        private void BtnSalirT1_MouseEnter(object sender, EventArgs e)
+        {
+            LbSalirT1.ForeColor = Color.Gray;
+        }
+        private void BtnSalirT1_MouseLeave(object sender, EventArgs e)
+        {
+            LbSalirT1.ForeColor = Color.White;
+        } 
         //-------------------------------------------------------------------------
         //FUNCIONES PARA LAS TABLAS
         //-------------------------------------------------------------------------
@@ -99,11 +131,11 @@ namespace PE_HMFG
             {
                 if (NumColumnas.Value == 0 && NumFilas.Value == 0)
                 {
-                    return;
+                    NumColumnas.Value = 10;
+                    NumFilas.Value = 10;
                 }
 
                 //Crear tabla "Matriz"
-
                 for (int i = 1; i <= NumColumnas.Value; i++)
                 {
                     DgvTablaDinamica.Columns.Add("Col" + i.ToString(), "x" + i.ToString());
@@ -111,7 +143,6 @@ namespace PE_HMFG
                 DgvTablaDinamica.Rows.Add((int)NumFilas.Value);
 
                 //Llenar Filas y generar números aleatorios
-
                 while (fila < NumColumnas.Value)
                 {
                     columna = 0;
@@ -123,10 +154,12 @@ namespace PE_HMFG
                         int numA = int.Parse(DgvTablaDinamica.Rows[fila].Cells[columna].Value.ToString());
                         if (numA % 2 == 0)
                         {
+                            DgvTablaDinamica.Rows[fila].Cells[columna].Style.BackColor = Color.LightYellow;
                             totalPares += numA;
                         }
                         else
                         {
+                            DgvTablaDinamica.Rows[fila].Cells[columna].Style.BackColor = Color.LightGreen;
                             totalImpares += numA; 
                         }
 
@@ -147,8 +180,14 @@ namespace PE_HMFG
                     }
                     fila++;
                 }
-                LbTotalAzul.Text = "Total Pares\n" + totalPares;
-                LbTotalRojo.Text = "Total Impares\n" + totalImpares;
+                LbSumaTotal1.Text = "Total Amarillo: " + totalPares;
+                LbSumaTotal1.ForeColor = Color.LightYellow;
+                LbSumaTotal2.Text = "Total Verde: " + totalImpares;
+                LbSumaTotal2.ForeColor = Color.LightGreen;
+                LbSumaTotal3.Text = "Total Azul: " + totalD1;
+                LbSumaTotal3.ForeColor = Color.Aqua;
+                LbSumaTotal4.Text = "Total Rojo: " + totalD2;
+                LbSumaTotal4.ForeColor = Color.Red;
             }
             else
             {
@@ -161,39 +200,6 @@ namespace PE_HMFG
             DgvTablaPrincipal.Rows.Clear();
             DgvTablaWhile.Rows.Clear();
         }
-        //-------------------------------------------------------------------------
-        //FUNCION PARA SALIR DEL PROGRAMA
-        //-------------------------------------------------------------------------
-        public void CerrarVentana()
-        {
-            // Mostrar el formulario principal nuevamente
-            if (Application.OpenForms.Count > 0)
-            {
-                DlgMenu Menu = Application.OpenForms[0] as DlgMenu;
-                Menu.Show();
-            }
-        }
-        private void DlgTrabajo1_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            CerrarVentana();
-        }
-
-        //-------------------------------------------------------------------------
-        //BOTON SALIR 
-        //-------------------------------------------------------------------------
-        private void BtnSalirT1_Click(object sender, EventArgs e)
-        {
-            CerrarVentana();
-            this.Close();
-        }
-        private void BtnSalirT1_MouseEnter(object sender, EventArgs e)
-        {
-            LbSalirT1.ForeColor = Color.Gray;
-        }
-        private void BtnSalirT1_MouseLeave(object sender, EventArgs e)
-        {
-            LbSalirT1.ForeColor = Color.White;
-        } 
         //-------------------------------------------------------------------------
         //CHECK BOXS TABLAS - Mostrar tablas
         //-------------------------------------------------------------------------
@@ -211,6 +217,9 @@ namespace PE_HMFG
             LbFilas.Visible = false;
             NumFilas.Visible = false;
             BtnLlenarTablaExtremo.Visible = false;
+
+            //GrupBox Suma Total
+            GbxSumaTotal.Visible = false;
         }
         //-------------------------------------------------------------------------
         //CHECK BOXS TABLAS - Mostrar tablas
@@ -258,6 +267,8 @@ namespace PE_HMFG
                 NumColumnas.Visible = true;
                 LbFilas.Visible = true;
                 NumFilas.Visible = true;
+
+                GbxSumaTotal.Visible = true;
             }
             else
             {
@@ -296,8 +307,10 @@ namespace PE_HMFG
             LimpiarTablas();
             if (CheckTablaDinamica.Checked)
             {
-                LbTotalRojo.Text = "";
-                LbTotalAzul.Text = "";
+                LbSumaTotal2.Text = "...";
+                LbSumaTotal1.Text = "...";
+                LbSumaTotal3.Text = "...";
+                LbSumaTotal4.Text = "...";
             }
         }
 
