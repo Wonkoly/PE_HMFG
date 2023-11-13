@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace PE_HMFG
@@ -21,7 +15,7 @@ namespace PE_HMFG
         //-------------------------------------------------------------------------
         public DlgTrabajo1()
         {
-           InitializeComponent();
+            InitializeComponent();
 
             //-----------------------------------------------------------------
             //CONFIGURACION DE BOTON SALIR
@@ -32,8 +26,8 @@ namespace PE_HMFG
 
             //-----------------------------------------------------------------
             //CONFIGURACION TABLAS - Ocultar
-            DesabilitarControles();           
-            
+            DesabilitarControles();
+
         }
         //-------------------------------------------------------------------------
         //FUNCION PARA SALIR DEL PROGRAMA
@@ -42,7 +36,7 @@ namespace PE_HMFG
         {
             // Mostrar el formulario principal nuevamente
             if (Application.OpenForms.Count > 0)//Checamos si exixten formularios abiertos
-            {   
+            {
                 //Agarramos una referencia del primer formulario y lo asignamos a un objeto similar.
                 DlgMenu Menu = Application.OpenForms[0] as DlgMenu;
                 Menu.Show();
@@ -67,7 +61,7 @@ namespace PE_HMFG
         private void BtnSalirT1_MouseLeave(object sender, EventArgs e)
         {
             LbSalirT1.ForeColor = Color.White;
-        } 
+        }
         //-------------------------------------------------------------------------
         //FUNCIONES PARA LAS TABLAS
         //-------------------------------------------------------------------------
@@ -107,7 +101,7 @@ namespace PE_HMFG
             int i = 0;
             while (i < 4)
             {
-                DgvTablaWhile.Rows.Add();   
+                DgvTablaWhile.Rows.Add();
                 int j = 0;
                 while (j < 4)
                 {
@@ -160,7 +154,7 @@ namespace PE_HMFG
                         else
                         {
                             DgvTablaDinamica.Rows[fila].Cells[columna].Style.BackColor = Color.LightGreen;
-                            totalImpares += numA; 
+                            totalImpares += numA;
                         }
 
                         // Sumar la diagonal principal (de arriba izquierda a abajo derecha)
@@ -247,7 +241,7 @@ namespace PE_HMFG
                 CheckTablaDinamica.Checked = false;
                 CheckTablaPrincipal.Checked = false;
                 DgvTablaWhile.Visible = true;
-                
+
             }
             else
             {
@@ -284,11 +278,11 @@ namespace PE_HMFG
             if (CheckTablaPrincipal.Checked)
             {
                 LlenarTablaPrincipal();
-            } 
+            }
             if (CheckTablaWhile.Checked)
             {
                 LlenarTablaWhile();
-            } 
+            }
             if (CheckTablaDinamica.Checked)
             {
                 LlenarTablaDinamica();

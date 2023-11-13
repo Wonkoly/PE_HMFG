@@ -1,7 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using OfficeOpenXml;
+using System;
 using System.Windows.Forms;
 
 namespace PE_HMFG
@@ -14,6 +12,9 @@ namespace PE_HMFG
         [STAThread]
         static void Main()
         {
+            //Para poder usar libreia de importar excel
+            ExcelPackage.LicenseContext = LicenseContext.NonCommercial;
+
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new DlgMenu());

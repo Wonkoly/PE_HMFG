@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace PE_HMFG
@@ -22,6 +16,7 @@ namespace PE_HMFG
         //VENTANAS
         DlgTrabajo1 T1;
         DlgTrabajo2 T2;
+        DlgTrabajo3 T3;
 
         public DlgMenu()
         {
@@ -137,7 +132,7 @@ namespace PE_HMFG
         private void BtnTrabajo2_MouseEnter(object sender, EventArgs e)
         {
             LbTrabajo2.ForeColor = Color.Gray;
-            LbDialogo.Text = "Este es el Trabajo 2";
+            LbDialogo.Text = "Figuras y Factales de MandelBrot.";
             PkImagen.Image = Properties.Resources.PkTrabajo2;
             BtnTrabajo2.Image = Properties.Resources.BtnTrabajo2_2;
         }
@@ -154,11 +149,18 @@ namespace PE_HMFG
         private void BtnTrabajo3_Click(object sender, EventArgs e)
         {
             LbTrabajo3.ForeColor = Color.Red;
+            // Verificar si el formulario secundario ya existe
+            if (T3 == null || T3.IsDisposed)
+            {
+                T3 = new DlgTrabajo3();
+                T3.Show();
+                this.Hide();
+            }
         }
         private void BtnTrabajo3_MouseEnter(object sender, EventArgs e)
         {
             LbTrabajo3.ForeColor = Color.Gray;
-            LbDialogo.Text = "Este es el Trabajo 3";
+            LbDialogo.Text = "Sistemas de Trazos de Cordenadas.";
             PkImagen.Image = Properties.Resources.PkTrabajo3;
             BtnTrabajo3.Image = Properties.Resources.BtnTrabajo3_2;
         }
@@ -178,14 +180,14 @@ namespace PE_HMFG
         }
         private void BtnTrabajo4_MouseEnter(object sender, EventArgs e)
         {
-            LbTrabajo4.ForeColor= Color.Gray;
+            LbTrabajo4.ForeColor = Color.Gray;
             LbDialogo.Text = "Este seria el Trabajo 4, xd.";
             PkImagen.Image = Properties.Resources.PkDesconocido;
         }
         private void BtnTrabajo4_MouseLeave(object sender, EventArgs e)
         {
             LbTrabajo4.ForeColor = Color.White;
-            LbDialogo.Text= "...";
+            LbDialogo.Text = "...";
             PkImagen.Image = null;
         }
         //
@@ -225,5 +227,5 @@ namespace PE_HMFG
                 }
             }
         }
-    }       
-}   
+    }
+}
