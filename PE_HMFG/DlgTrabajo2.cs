@@ -1,4 +1,6 @@
-﻿using System;
+﻿using OfficeOpenXml.Style;
+using System;
+using System.Diagnostics;
 using System.Drawing;
 using System.Windows.Forms;
 
@@ -8,6 +10,13 @@ namespace PE_HMFG
     {
         //VARIABLES GLOBALES
         DlgTrabajo1 funcs = new DlgTrabajo1();
+
+        private Bitmap bmp;
+        private bool cambiarModo = false;
+        private bool usarLapiz = false;
+        private bool usarBorrador = false;
+        private bool dibujar = false;
+        private Point puntoAnterior;
 
         //-------------------------------------------------------------------------
         //CONSTRUCTOR Y CONFIGURACION AL INICIAR EL FORMULARIO
@@ -25,54 +34,24 @@ namespace PE_HMFG
 
             //-----------------------------------------------------------------
             //CONFIGURACION DE BOTON SALIR - 'Crear una funcion en el MENU y ponerla publica' 
-            ConfigComboxP();
-            DesabilitarControles();
+            CbPotenciaAdd();
+
+            //-----------------------------------------------------------------
+            //CONFIGURACION DE PICTUREBOX
+            bmp = new Bitmap(PbxGeneral.Width, PbxGeneral.Height);
         }
-        private void ConfigComboxP()
+        private void CbPotenciaAdd()
         {
-            for (int i = 1; i < 6; i++)
+            for (int i = 2; i < 7; i++)
             {
-                CbxPotencias.Items.Add($"Potencia {i.ToString()}");
+                CbxPotencias.Items.Add($"Potencia {i}");
             }
-        }
-        private void DesabilitarControles()
-        {
-            GbxBotonesFiguras.Visible = false;
-            GbxHerramientasPain.Visible = false;
-            GbxBotonesMandel.Visible = false;
-            GbxBotonesPoligonos.Visible = false;
+            CbxPotencias.SelectedIndex = 0;
         }
         private void DlgTrabajo2_FormClosing(object sender, FormClosingEventArgs e)
         {
             funcs.CerrarVentana();
-        }
-        private void TabPracticas_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            TabPage paginaSeleccionada = TabPracticas.SelectedTab;
-
-            switch (paginaSeleccionada.Name)
-            {
-                case "TabMandelBrot":
-                    DesabilitarControles();
-                    GbxBotonesMandel.Visible = true;
-                    break;
-                case "TabPaint":
-                    DesabilitarControles();
-                    GbxHerramientasPain.Visible = true;
-                    break;
-                case "TabFiguras":
-                    DesabilitarControles();
-                    GbxBotonesFiguras.Visible = true;
-                    break;
-                case "TabPoligonos":
-                    DesabilitarControles();
-                    GbxBotonesPoligonos.Visible = true;
-                    break;
-                case null:
-                    DesabilitarControles();
-                    break;
-            }
-        }
+        }        
         //-------------------------------------------------------------------------
         //BOTON SALIR
         //-------------------------------------------------------------------------
@@ -90,313 +69,266 @@ namespace PE_HMFG
             LbSalirT1.ForeColor = Color.White;
         }
         //-------------------------------------------------------------------------
-        //VENTANA FIGURAS
-        //Crea rectangulos de diferentes dimesiones y colores atravez de un funcion
-        //utilizando la clase de Graphis t Drawn
-        //------------------------------------------------------------------------- 
-        //VARIABLES 
-        bool CambioModo = false; //falso - Cuadrados con un clik verdadero - al mover
-
-        //------------------------------------------------------------------------- 
-        //FUNCIONES
-        //------------------------------------------------------------------------- 
-        public void Reactangulo(int X, int Y)
+        //FUNCIONES MANDELBROT:
+        //Funcion que recibe como parametro el numero de iteraciones y el valor de
+        //la potencia para calcular el fractal de mandelbrot
+        //-------------------------------------------------------------------------
+        private void MandelbrotCustomPowerSet(int power, int iteraciones)
         {
-            //Colorear colores aleatorios
-            Random rgb = new Random();
+            int width = PbxGeneral.Width;
+            int height = PbxGeneral.Height;
+            Bitmap bmp = new Bitmap(width, height);
 
-            //Creamos una pluma para dibujar
-            Pen Pluma;
+            for (int row = 0; row < height; row++)
+            {
+                for (int col = 0; col < width; col++)
+                {
+                    double c_re = (col - width / 2.0) * 4.0 / width;
+                    double c_im = (row - height / 2.0) * 4.0 / height;
+                    int iteration = 0;
+                    double x = 0, y = 0;
+
+                    while (iteration < iteraciones && ((x * x + y * y)) <= 4)
+                    {
+                        if (power == 2)
+                        {
+                            double x_temp = (x * x) - (y * y) + c_re;
+                            y = 2 * x * y + c_im;
+                            x = x_temp;
+                        }
+                        else if (power == 3)
+                        {
+                            double x_temp = x * x * x - 3 * x * y * y + c_re;
+                            y = 3 * x * x * y - y * y * y + c_im;
+                            x = x_temp;
+                        }
+                        else if (power == 4)
+                        {   
+                            double x_temp = x * x * x * x - 6 * x * x * y * y + y * y * y * y + c_re;
+                            y = 4 * x * x * x * y - 4 * x * y * y * y + c_im;
+                            x = x_temp;
+                        }
+                        else if (power == 5)
+                        {
+                            double x_temp = x * x * x * x * x - 10 * x * x * x * y * y + 5 * x * y * y * y * y + c_re;
+                            y = 5 * x * x * x * x * y - 10 * x * x * y * y * y + y * y * y * y * y + c_im;
+                            x = x_temp;
+                        }
+                        else if (power == 6)
+                        {
+                            double x_temp = x * x * x * x * x * x - 15 * x * x * x * x * y * y + 15 * x * x * y * y * y * y - y * y * y * y * y * y + c_re;
+                            y = 6 * x * x * x * x * x * y - 20 * x * x * x * y * y * y + 6 * x * y * y * y * y * y + c_im;
+                            x = x_temp;
+                        }
+                        iteration++;
+                    }
+
+                    if (iteration < 1000)
+                        bmp.SetPixel(col, row, Color.FromArgb(iteration % 128, iteration % 50 * 5, iteration % 10));
+                    else
+                        bmp.SetPixel(col, row, Color.Black);
+                }
+                PbxGeneral.Image = bmp;
+            }
+        }
+        private void DibujaRectangulo(int X, int Y)
+        {
+            int x, y, ancho, alto;
+            Random rgb = new Random();
             Color color = Color.FromArgb(rgb.Next(0, 255),
                                          rgb.Next(0, 255),
                                          rgb.Next(0, 255));
+            Pen pen = new Pen(color, rgb.Next(2,6));
 
-            //Le indicamos donde vamos a dibujar
-            Graphics g = TabFiguras.CreateGraphics();
-
-            //Le indicamos las cordenadas
-            int x, y, ancho, alto;
-
-            Pluma = new Pen(color, rgb.Next(2, 6));
             x = X;
             y = Y;
             ancho = rgb.Next(10, 150);
             alto = rgb.Next(10, 150);
 
-            g.DrawRectangle(Pluma, x, y, ancho, alto);
-
-        }
-        //-------------------------------------------------------------------------
-        //EVENTOS
-        //------------------------------------------------------------------------- 
-        private void TabFiguras_MouseClick(object sender, MouseEventArgs e)
-        {
-            if (CambioModo == false)
+            using (Graphics g = Graphics.FromImage(bmp))
             {
-                Reactangulo(e.X, e.Y);
+                g.DrawRectangle(pen, x, y, ancho, alto);
             }
+            PbxGeneral.Image = bmp;
         }
-        private void PnlPintar_MouseMove(object sender, MouseEventArgs e)
+        //Funcione que dibuje un rectangulo ezopecificando el tamaño con el mouse
+        private void DibujarPoligono(int X, int Y)
         {
-            if (CambioModo == true)
+            //Colorear colores aleatorios
+            Random rgb = new Random();
+
+            //Creamos una pluma para dibujar
+            Color color = Color.FromArgb(rgb.Next(0, 255),
+                                         rgb.Next(0, 255),
+                                         rgb.Next(0, 255));
+
+            Font f = new Font("Arial", 12.0f);
+            Brush brush = new SolidBrush(Color.Blue);
+
+            Pen Pluma = new Pen(color, rgb.Next(2, 6));
+
+            //Le indicamos donde vamos a dibujar
+            using(Graphics g = Graphics.FromImage(bmp))
             {
-                MouseEventArgs mouse;
-                mouse = (MouseEventArgs)e;
-                Reactangulo(mouse.X, mouse.Y);
+                g.Clear(Color.White);
+                //Le indicamos las cordenadas
+                PointF p1 = new PointF(100.0f + X, -100.0f + Y);
+                PointF p2 = new PointF(259.869f + X, -54.52f + Y);
+                PointF p3 = new PointF(424.593f + X, -101.937f + Y);
+                PointF p4 = new PointF(483.179f + X, -251.583f + Y);
+                PointF p5 = new PointF(329.925f + X, -197.340f + Y);
+                PointF p6 = new PointF(233.929f + X, -258.241f + Y);
+                PointF p7 = new PointF(129.781f + X, -204.533f + Y);
+                PointF p8 = new PointF(136.551f + X, -160.046f + Y);
+
+                PointF[] points = new PointF[] { p1, p2, p3, p4, p5, p6, p7, p8 };
+
+                //Dibujar poligono
+                g.DrawPolygon(Pluma, points);
+
+                //Puntos con strings
+                g.DrawString("P1", f, brush, p1);
+                g.DrawString("P2", f, brush, p2);
+                g.DrawString("P3", f, brush, p3);
+                g.DrawString("P4", f, brush, p4);
+                g.DrawString("P5", f, brush, p5);
+                g.DrawString("P6", f, brush, p6);
+                g.DrawString("P7", f, brush, p7);
+                g.DrawString("P8", f, brush, p8);
             }
+            PbxGeneral.Image = bmp;
         }
-        private void TabFiguras_MouseDoubleClick(object sender, MouseEventArgs e)
-        {
-            CambioModo = !CambioModo;
-            if (CambioModo == true)
-            {
-                LbCambioModo.Text = "Turbo";
-            }
-            else if (CambioModo == false)
-            {
-                LbCambioModo.Text = "Una figura";
-            }
-        }
-        //-------------------------------------------------------------------------
-        //BOTONES
-        //------------------------------------------------------------------------- 
-        private void BtnBorrarRectangulos_Click(object sender, EventArgs e)
-        {
-            Graphics g = TabFiguras.CreateGraphics();
-            g.Clear(Color.White);
-        }
-        //-------------------------------------------------------------------------
-        //VENTANA MANDELBROT
-        //Crea un factal atravez de una funcion utilizacndo las ecuaciones del fisico
-        //Mandelbrot 
-        //------------------------------------------------------------------------- 
-        //FUNCIONES
-        //------------------------------------------------------------------------- 
-        private void MandelBrotSet()
-        {
-            //Construccion del lienzo a pintar
-            int Ancho = PbxMandalaLienzo.Width;
-            int Alto = PbxMandalaLienzo.Height;
-            Bitmap bitmap = new Bitmap(Ancho, Alto);
-
-            for (int fila = 0; fila < Alto; fila++)
-            {
-                for (int columna = 0; columna < Ancho; columna++)
-                {
-                    double c_re = (columna - Ancho / 2.0) * 4.0 / Ancho; //1.6 2.4
-                    double c_im = (fila - Alto / 2.0) * 4.0 / Alto;      //2.0 2.6
-                    int iteracion = 0;
-                    double x = 0, y = 0;
-
-                    while (iteracion < 1000 && ((x * x) + (y * y)) <= 4)
-                    {
-                        double x_temporal = (x * x) - (x * x) + c_re;
-                        y = (x * x) - (x * x) + c_im;
-                        x = x_temporal;
-                        iteracion++;
-                    }
-
-                    if (iteracion < 1000)
-                    {
-                        bitmap.SetPixel(columna, fila, Color.FromArgb(iteracion % 128, iteracion % 30 * 5, iteracion % 10));
-                    }
-                    else
-                    {
-                        bitmap.SetPixel(columna, fila, Color.Black);
-                    }
-                }
-            }
-            PbxMandalaLienzo.Image = bitmap;
-        }
-        private void MandelBrotExp(int iteraciones, int pow)
-        {
-            //Construccion del lienzo a pintar
-            int Ancho = PbxMandalaLienzo.Width;
-            int Alto = PbxMandalaLienzo.Height;
-            Bitmap bitmap = new Bitmap(Ancho, Alto);
-
-            for (int fila = 0; fila < Alto; fila++)
-            {
-                for (int columna = 0; columna < Ancho; columna++)
-                {
-                    double c_re = (columna - Ancho / 2.0) * 4.0 / Ancho; //1.6 2.4
-                    double c_im = (fila - Alto / 2.0) * 4.0 / Alto;      //2.0 2.6
-                    int iteracion = 0;
-                    double x = 0, y = 0;
-
-                    while (iteracion < iteraciones && ((x * x) + (y * y)) <= 4)
-                    {
-                        double x_temporal = Math.Pow(x, pow) - Math.Pow(y, pow) + c_re;
-                        y = Math.Pow(x, pow) - Math.Pow(y, pow) + c_im;
-                        x = x_temporal;
-                        iteracion++;
-                    }
-
-                    if (iteracion < iteraciones)
-                    {
-                        bitmap.SetPixel(columna, fila, Color.FromArgb(iteracion % 128, iteracion % 30 * 5, iteracion % 10));
-                    }
-                    else
-                    {
-                        bitmap.SetPixel(columna, fila, Color.Black);
-                    }
-                }
-            }
-            PbxMandalaLienzo.Image = bitmap;
-        }
-        //------------------------------------------------------------------------- 
-        //BOTONES
-        //------------------------------------------------------------------------- 
-        private void BtnMandelBrot_Click(object sender, EventArgs e)
-        {
-            MandelBrotSet();
-        }
-        private void BtnMandelBrotExp_Click(object sender, EventArgs e)
-        {
-            int itera = (int)NumFactalIteracion.Value;
-            int pow = CbxPotencias.SelectedIndex;
-            MandelBrotExp(itera, pow);
-        }
-        private void BtnBorrar_Click(object sender, EventArgs e)
-        {
-            Graphics g = TabFiguras.CreateGraphics();
-            g.Clear(Color.White);
-
-            PbxMandalaLienzo.Image = null;
-        }
-        //-------------------------------------------------------------------------
-        //VENTANA PAINT
-        //Es la app de paint en una vantana que hara las funciones principales como
-        //Dibujar, Borrar y seleccionar color
-        //------------------------------------------------------------------------- 
-        //Variables globales
-        private Point puntoAnterior;
-        private bool dibujando = false;
-
-        private bool UsarLapiz = false;
-        //FUNCIONES
-        //------------------------------------------------------------------------- 
         public void Lapiz(Point valor1, Point valor2)
         {
             //Creamos una pluma para dibujar
             Pen Pluma;
             Color color = Color.Black;
 
-            using (Graphics g = TabPaint.CreateGraphics())
+            using (Graphics g = Graphics.FromImage(bmp))
             {
-                Pluma = new Pen(color, TrackLapizTamano.Value);
+                Pluma = new Pen(color, TrackTamano.Value);
                 g.DrawLine(Pluma, valor1, valor2);
             }
+            PbxGeneral.Image = bmp;
         }
-        //------------------------------------------------------------------------- 
-        //EVENTOS
-        //-------------------------------------------------------------------------  
-        private void TabPaint_MouseMove(object sender, MouseEventArgs e)
+        public void Borrador(Point valor, int tamanoBorrador)
         {
-            if (dibujando)
+            // Obtén las coordenadas para el cuadrado de borrado
+            int mitadTamano = tamanoBorrador/2;
+            Rectangle areaBorrado = new Rectangle(valor.X - mitadTamano, valor.Y - mitadTamano, tamanoBorrador, tamanoBorrador);
+
+            using (Graphics g = Graphics.FromImage(bmp))
+            {
+                // Usa el color de fondo del PictureBox para simular el borrado
+                using (Brush borrador = new SolidBrush(PbxGeneral.BackColor)) // O el color que desees usar para borrar
+                {
+                    g.FillRectangle(borrador, areaBorrado);
+                }
+            }
+            PbxGeneral.Image = bmp;
+        }
+        //-------------------------------------------------------------------------
+        //BOTONES DE CLASE
+        //-------------------------------------------------------------------------
+        private void BtnMandelBrot_Click(object sender, EventArgs e)
+        {
+            MandelbrotCustomPowerSet(CbxPotencias.SelectedIndex + 2, (int)NumFactalIteracion.Value);
+        }
+        private void BtnDibujarPoligono_Click(object sender, EventArgs e)
+        {
+            DibujarPoligono((int)NumPY.Value, (int)NumPX.Value);
+        }
+        private void BtnLapiz_Click(object sender, EventArgs e)
+        {
+            usarLapiz = !usarLapiz;
+            usarBorrador = false;
+            PbxGeneral.Cursor = Cursors.Cross;
+            LbTamano.Text = "Tamaño lapiz";
+            if (usarLapiz == false) { PbxGeneral.Cursor = Cursors.Default; }
+        }
+        private void BtnBorrador_Click(object sender, EventArgs e)
+        {
+            usarBorrador = !usarBorrador;
+            usarLapiz = false;
+            PbxGeneral.Cursor = Cursors.Cross;
+            LbTamano.Text = "Tamaño borrador";
+            if (usarBorrador == false) { PbxGeneral.Cursor = Cursors.Default; }
+        }
+        private void BtnExportar_Click(object sender, EventArgs e)
+        {
+            saveFileDialog.Filter = "Imagen PNG|*.png";
+            saveFileDialog.Title = "Guardar Imagen";
+            saveFileDialog.ShowDialog();
+
+            if (saveFileDialog.FileName != "")
+            {
+                System.IO.FileStream fs = (System.IO.FileStream)saveFileDialog.OpenFile();
+                PbxGeneral.Image.Save(fs, System.Drawing.Imaging.ImageFormat.Png);
+                fs.Close();
+            }
+        }
+        //-------------------------------------------------------------------------
+        //EVENTOS DE CLASE
+        //-------------------------------------------------------------------------
+        private void PbxGeneral_MouseClick(object sender, MouseEventArgs e)
+        {
+            if (cambiarModo == false && dibujar == false)
+            {
+                DibujaRectangulo(e.X, e.Y);
+            }
+        }
+        private void PbxGeneral_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (dibujar == true && usarLapiz == true)
             {
                 Lapiz(puntoAnterior, e.Location);
                 puntoAnterior = e.Location;
             }
-        }
-        private void TabPaint_MouseDown(object sender, MouseEventArgs e)
-        {
-            if (e.Button == MouseButtons.Left && UsarLapiz == true)
+            else if (dibujar == true && usarBorrador == true)
             {
-                dibujando = true;
+                Borrador(e.Location, 2*TrackTamano.Value);
+                puntoAnterior = e.Location;
+            }
+            else if (cambiarModo == true)
+            {
+                DibujaRectangulo(e.X, e.Y);
+            }
+        }
+        private void PbxGeneral_DoubleClick(object sender, EventArgs e)
+        {
+            cambiarModo = !cambiarModo;
+            if (cambiarModo == true)
+            {
+                LbCambioModo.Text = "Varias";
+            }
+            else if (cambiarModo == false)
+            {
+                LbCambioModo.Text = "Una";
+            }
+        }
+        private void PbxGeneral_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left && usarLapiz == true)
+            {
+                dibujar = true;
+                puntoAnterior = e.Location;
+            }else if (e.Button == MouseButtons.Left && usarBorrador == true)
+            {
+                dibujar = true;
                 puntoAnterior = e.Location;
             }
         }
-        private void TabPaint_MouseUp(object sender, MouseEventArgs e)
+        private void PbxGeneral_MouseUp(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left)
             {
-                dibujando = false;
+                dibujar = false;
             }
         }
-        //------------------------------------------------------------------------- 
-        //BOTONES
-        //-------------------------------------------------------------------------  
-        private void BtnLapiz_Click(object sender, EventArgs e)
+        private void GbxBotonesFiguras_Enter(object sender, EventArgs e)
         {
-            UsarLapiz = !UsarLapiz;
-            TabPaint.Cursor = Cursors.Cross;
-            if (UsarLapiz == false) { TabPaint.Cursor = Cursors.Default; }
-        }
-        private void BtnBorrador_Click(object sender, EventArgs e)
-        {
-            TabPaint.Invalidate();
-        }
-        private void BtnRectangulo_Click(object sender, EventArgs e)
-        {
-
-        }
-        private void BtnCirculo_Click(object sender, EventArgs e)
-        {
-
-        }
-        private void BtnTriangulo_Click(object sender, EventArgs e)
-        {
-
-        }
-        private void BtnExportar_Click(object sender, EventArgs e)
-        {
-
-        }
-        //-------------------------------------------------------------------------
-        //VENTANA POLIGONOS
-        //Dibujamos poligonos con la 
-        //Mandelbrot 
-        //------------------------------------------------------------------------- 
-        //FUNCIONES
-        //------------------------------------------------------------------------- 
-        public void Poligonos(int X, int Y)
-        {
-            //Colorear colores aleatorios
-            Random rgb = new Random();
-
-            Font f = new Font("Arial", 12.0f);
-            Brush brush = new SolidBrush(Color.Blue);
-
-            //Creamos una pluma para dibujar
-            Pen Pluma;
-            Color color = Color.FromArgb(rgb.Next(0, 255),
-                                         rgb.Next(0, 255),
-                                         rgb.Next(0, 255));
-
-            //Le indicamos donde vamos a dibujar
-            Graphics g = TabPoligonos.CreateGraphics();
-
-            //Le indicamos las cordenadas
-            PointF p1 = new PointF(100.0f + X, -100.0f + Y);
-            PointF p2 = new PointF(259.869f + X, -54.52f + Y);
-            PointF p3 = new PointF(424.593f + X, -101.937f + Y);
-            PointF p4 = new PointF(483.179f + X, -251.583f + Y);
-            PointF p5 = new PointF(329.925f + X, -197.340f + Y);
-            PointF p6 = new PointF(233.929f + X, -258.241f + Y);
-            PointF p7 = new PointF(129.781f + X, -204.533f + Y);
-            PointF p8 = new PointF(136.551f + X, -160.046f + Y);
-
-            PointF[] points = new PointF[] { p1, p2, p3, p4, p5, p6, p7, p8 };
-
-            Pluma = new Pen(color, rgb.Next(2, 6));
-
-            //Dibujar poligono
-            g.DrawPolygon(Pluma, points);
-
-            //Puntos con strings
-            g.DrawString("P1", f, brush, p1);
-            g.DrawString("P2", f, brush, p2);
-            g.DrawString("P3", f, brush, p3);
-            g.DrawString("P4", f, brush, p4);
-            g.DrawString("P5", f, brush, p5);
-            g.DrawString("P6", f, brush, p6);
-            g.DrawString("P7", f, brush, p7);
-            g.DrawString("P8", f, brush, p8);
-        }
-        private void BtnDibujarPoligono_Click(object sender, EventArgs e)
-        {
-            Poligonos((int)NumPY.Value, (int)NumPX.Value);
+            ToolTip tooltip = new ToolTip();
+            tooltip.SetToolTip(GbxBotonesFiguras, "Doble click para cambiar de Modo.");
         }
     }
 }

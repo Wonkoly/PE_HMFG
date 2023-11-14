@@ -242,7 +242,7 @@
             this.LbSumaTotal4.AutoSize = true;
             this.LbSumaTotal4.Location = new System.Drawing.Point(7, 97);
             this.LbSumaTotal4.Name = "LbSumaTotal4";
-            this.LbSumaTotal4.Size = new System.Drawing.Size(31, 21);
+            this.LbSumaTotal4.Size = new System.Drawing.Size(26, 18);
             this.LbSumaTotal4.TabIndex = 23;
             this.LbSumaTotal4.Text = "...";
             this.LbSumaTotal4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -252,7 +252,7 @@
             this.LbSumaTotal3.AutoSize = true;
             this.LbSumaTotal3.Location = new System.Drawing.Point(7, 76);
             this.LbSumaTotal3.Name = "LbSumaTotal3";
-            this.LbSumaTotal3.Size = new System.Drawing.Size(31, 21);
+            this.LbSumaTotal3.Size = new System.Drawing.Size(26, 18);
             this.LbSumaTotal3.TabIndex = 22;
             this.LbSumaTotal3.Text = "...";
             this.LbSumaTotal3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -262,7 +262,7 @@
             this.LbSumaTotal2.AutoSize = true;
             this.LbSumaTotal2.Location = new System.Drawing.Point(7, 55);
             this.LbSumaTotal2.Name = "LbSumaTotal2";
-            this.LbSumaTotal2.Size = new System.Drawing.Size(31, 21);
+            this.LbSumaTotal2.Size = new System.Drawing.Size(26, 18);
             this.LbSumaTotal2.TabIndex = 21;
             this.LbSumaTotal2.Text = "...";
             this.LbSumaTotal2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -272,7 +272,7 @@
             this.LbSumaTotal1.AutoSize = true;
             this.LbSumaTotal1.Location = new System.Drawing.Point(7, 34);
             this.LbSumaTotal1.Name = "LbSumaTotal1";
-            this.LbSumaTotal1.Size = new System.Drawing.Size(31, 21);
+            this.LbSumaTotal1.Size = new System.Drawing.Size(26, 18);
             this.LbSumaTotal1.TabIndex = 20;
             this.LbSumaTotal1.Text = "...";
             this.LbSumaTotal1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -286,7 +286,7 @@
             this.LbSalirT1.ForeColor = System.Drawing.Color.White;
             this.LbSalirT1.Location = new System.Drawing.Point(600, 56);
             this.LbSalirT1.Name = "LbSalirT1";
-            this.LbSalirT1.Size = new System.Drawing.Size(112, 38);
+            this.LbSalirT1.Size = new System.Drawing.Size(92, 31);
             this.LbSalirT1.TabIndex = 19;
             this.LbSalirT1.Text = "Salir";
             this.LbSalirT1.Click += new System.EventHandler(this.BtnSalirT1_Click);
@@ -315,7 +315,7 @@
             this.CheckB.Location = new System.Drawing.Point(188, 46);
             this.CheckB.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.CheckB.Name = "CheckB";
-            this.CheckB.Size = new System.Drawing.Size(18, 17);
+            this.CheckB.Size = new System.Drawing.Size(15, 14);
             this.CheckB.TabIndex = 5;
             this.CheckB.UseVisualStyleBackColor = true;
             // 
@@ -328,6 +328,7 @@
             this.BtnAgregar.TabIndex = 4;
             this.BtnAgregar.Text = "Agregar";
             this.BtnAgregar.UseVisualStyleBackColor = true;
+            this.BtnAgregar.Click += new System.EventHandler(this.BtnAgregar_Click);
             // 
             // LbLista
             // 
@@ -336,7 +337,7 @@
             this.LbLista.Location = new System.Drawing.Point(18, 76);
             this.LbLista.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.LbLista.Name = "LbLista";
-            this.LbLista.Size = new System.Drawing.Size(67, 21);
+            this.LbLista.Size = new System.Drawing.Size(56, 18);
             this.LbLista.TabIndex = 3;
             this.LbLista.Text = "Lista";
             // 
@@ -347,7 +348,7 @@
             this.LbCampo.Location = new System.Drawing.Point(17, 15);
             this.LbCampo.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.LbCampo.Name = "LbCampo";
-            this.LbCampo.Size = new System.Drawing.Size(79, 21);
+            this.LbCampo.Size = new System.Drawing.Size(65, 18);
             this.LbCampo.TabIndex = 2;
             this.LbCampo.Text = "Campo";
             // 
@@ -359,8 +360,9 @@
             this.TbCampo1.Location = new System.Drawing.Point(22, 40);
             this.TbCampo1.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.TbCampo1.Name = "TbCampo1";
-            this.TbCampo1.Size = new System.Drawing.Size(156, 29);
+            this.TbCampo1.Size = new System.Drawing.Size(156, 24);
             this.TbCampo1.TabIndex = 1;
+            this.TbCampo1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TbCampo1_KeyPress);
             // 
             // CbLista
             // 
@@ -371,21 +373,21 @@
             this.CbLista.Location = new System.Drawing.Point(22, 101);
             this.CbLista.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.CbLista.Name = "CbLista";
-            this.CbLista.Size = new System.Drawing.Size(156, 29);
+            this.CbLista.Size = new System.Drawing.Size(156, 25);
             this.CbLista.TabIndex = 0;
             // 
             // NumFilas
             // 
             this.NumFilas.Location = new System.Drawing.Point(16, 59);
             this.NumFilas.Name = "NumFilas";
-            this.NumFilas.Size = new System.Drawing.Size(157, 29);
+            this.NumFilas.Size = new System.Drawing.Size(157, 24);
             this.NumFilas.TabIndex = 21;
             // 
             // NumColumnas
             // 
             this.NumColumnas.Location = new System.Drawing.Point(16, 131);
             this.NumColumnas.Name = "NumColumnas";
-            this.NumColumnas.Size = new System.Drawing.Size(157, 29);
+            this.NumColumnas.Size = new System.Drawing.Size(157, 24);
             this.NumColumnas.TabIndex = 20;
             // 
             // PnlIzquierdo
@@ -444,7 +446,7 @@
             this.LbFilas.ForeColor = System.Drawing.Color.White;
             this.LbFilas.Location = new System.Drawing.Point(12, 35);
             this.LbFilas.Name = "LbFilas";
-            this.LbFilas.Size = new System.Drawing.Size(61, 21);
+            this.LbFilas.Size = new System.Drawing.Size(50, 18);
             this.LbFilas.TabIndex = 30;
             this.LbFilas.Text = "Filas";
             // 
@@ -454,7 +456,7 @@
             this.LbColumnas.ForeColor = System.Drawing.Color.White;
             this.LbColumnas.Location = new System.Drawing.Point(12, 107);
             this.LbColumnas.Name = "LbColumnas";
-            this.LbColumnas.Size = new System.Drawing.Size(106, 21);
+            this.LbColumnas.Size = new System.Drawing.Size(89, 18);
             this.LbColumnas.TabIndex = 31;
             this.LbColumnas.Text = "Columnas";
             // 
@@ -464,7 +466,7 @@
             this.CheckTablaDinamica.ForeColor = System.Drawing.Color.DarkGray;
             this.CheckTablaDinamica.Location = new System.Drawing.Point(24, 293);
             this.CheckTablaDinamica.Name = "CheckTablaDinamica";
-            this.CheckTablaDinamica.Size = new System.Drawing.Size(186, 25);
+            this.CheckTablaDinamica.Size = new System.Drawing.Size(155, 22);
             this.CheckTablaDinamica.TabIndex = 29;
             this.CheckTablaDinamica.Text = "Tabla Dinamica";
             this.CheckTablaDinamica.UseVisualStyleBackColor = true;
@@ -476,7 +478,7 @@
             this.CheckTablaWhile.ForeColor = System.Drawing.Color.DarkGray;
             this.CheckTablaWhile.Location = new System.Drawing.Point(24, 262);
             this.CheckTablaWhile.Name = "CheckTablaWhile";
-            this.CheckTablaWhile.Size = new System.Drawing.Size(145, 25);
+            this.CheckTablaWhile.Size = new System.Drawing.Size(121, 22);
             this.CheckTablaWhile.TabIndex = 28;
             this.CheckTablaWhile.Text = "Tabla While\r\n";
             this.CheckTablaWhile.UseVisualStyleBackColor = true;
@@ -506,7 +508,7 @@
             this.CheckTablaPrincipal.ForeColor = System.Drawing.Color.DarkGray;
             this.CheckTablaPrincipal.Location = new System.Drawing.Point(24, 231);
             this.CheckTablaPrincipal.Name = "CheckTablaPrincipal";
-            this.CheckTablaPrincipal.Size = new System.Drawing.Size(189, 25);
+            this.CheckTablaPrincipal.Size = new System.Drawing.Size(158, 22);
             this.CheckTablaPrincipal.TabIndex = 26;
             this.CheckTablaPrincipal.Text = "Tabla Principal";
             this.CheckTablaPrincipal.UseVisualStyleBackColor = true;
@@ -543,7 +545,7 @@
             // 
             // DlgTrabajo1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 21F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(942, 673);
             this.Controls.Add(this.PnlCentral);

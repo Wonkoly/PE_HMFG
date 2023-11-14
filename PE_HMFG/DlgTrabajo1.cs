@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Drawing;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace PE_HMFG
 {
@@ -10,6 +11,9 @@ namespace PE_HMFG
     //-------------------------------------------------------------------------
     public partial class DlgTrabajo1 : Form
     {
+        //Variables Globales
+        
+        
         //-------------------------------------------------------------------------
         //Cosntructor
         //-------------------------------------------------------------------------
@@ -328,6 +332,28 @@ namespace PE_HMFG
                 DgvTablaPrincipal.FirstDisplayedScrollingRowIndex = DgvTablaPrincipal.Rows.Count - 1;
                 DgvTablaPrincipal.Refresh();
             }
+        }
+
+        private void BtnAgregar_Click(object sender, EventArgs e)
+        {
+            CbLista.Items.Clear();
+            CbLista.Items.Add("Amarillo");
+            CbLista.Items.Add("Verde");
+            CbLista.Items.Add("Azul");
+            CbLista.Items.Add("Morado");
+            CbLista.Items.Add("Violeta");
+        }
+        private void TbCampo1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter && CheckB.Checked)
+            {
+                if (!string.IsNullOrEmpty(TbCampo1.Text))
+                {
+                    CbLista.Items.Add(TbCampo1.Text); // Agregar el valor al ComboBox
+                    TbCampo1.Clear(); // Limpiar el TextBox después de agregar el valor
+                }
+            }
+
         }
     }
 }

@@ -30,268 +30,56 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DlgTrabajo2));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.GbxBotonesPoligonos = new System.Windows.Forms.GroupBox();
-            this.NumPY = new System.Windows.Forms.NumericUpDown();
-            this.NumPX = new System.Windows.Forms.NumericUpDown();
-            this.BtnDibujarPoligono = new System.Windows.Forms.Button();
-            this.GbxHerramientasPain = new System.Windows.Forms.GroupBox();
-            this.BtnExportar = new System.Windows.Forms.Button();
-            this.BtnCirculo = new System.Windows.Forms.Button();
-            this.BtnTriangulo = new System.Windows.Forms.Button();
-            this.TrackLapizTamano = new System.Windows.Forms.TrackBar();
-            this.BtnRectangulo = new System.Windows.Forms.Button();
-            this.BtnBorrador = new System.Windows.Forms.Button();
-            this.BtnLapiz = new System.Windows.Forms.Button();
             this.LbSalirT1 = new System.Windows.Forms.Label();
             this.BtnSalirT1 = new System.Windows.Forms.PictureBox();
+            this.GbxHerramientasPain = new System.Windows.Forms.GroupBox();
+            this.LbTamano = new System.Windows.Forms.Label();
+            this.TrackTamano = new System.Windows.Forms.TrackBar();
+            this.BtnBorrador = new System.Windows.Forms.Button();
+            this.BtnExportar = new System.Windows.Forms.Button();
+            this.BtnLapiz = new System.Windows.Forms.Button();
+            this.GbxBotonesPoligonos = new System.Windows.Forms.GroupBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.NumPX = new System.Windows.Forms.NumericUpDown();
+            this.NumPY = new System.Windows.Forms.NumericUpDown();
+            this.BtnDibujarPoligono = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.GbxBotonesMandel = new System.Windows.Forms.GroupBox();
-            this.BtnBorrar = new System.Windows.Forms.Button();
             this.NumFactalIteracion = new System.Windows.Forms.NumericUpDown();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.BtnMandelBrotExp = new System.Windows.Forms.Button();
             this.CbxPotencias = new System.Windows.Forms.ComboBox();
-            this.NumAlto2 = new System.Windows.Forms.NumericUpDown();
-            this.NumAlto1 = new System.Windows.Forms.NumericUpDown();
             this.BtnMandelBrot = new System.Windows.Forms.Button();
-            this.NumAncho2 = new System.Windows.Forms.NumericUpDown();
-            this.NumAncho1 = new System.Windows.Forms.NumericUpDown();
             this.GbxBotonesFiguras = new System.Windows.Forms.GroupBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.LbCambioModo = new System.Windows.Forms.Label();
-            this.BtnBorrarRectangulos = new System.Windows.Forms.Button();
-            this.TabPracticas = new System.Windows.Forms.TabControl();
-            this.TabFiguras = new System.Windows.Forms.TabPage();
-            this.TabMandelBrot = new System.Windows.Forms.TabPage();
-            this.PbxMandalaLienzo = new System.Windows.Forms.PictureBox();
-            this.TabPaint = new System.Windows.Forms.TabPage();
-            this.TabPoligonos = new System.Windows.Forms.TabPage();
+            this.PbxGeneral = new System.Windows.Forms.PictureBox();
+            this.saveFileDialog = new System.Windows.Forms.SaveFileDialog();
             this.panel1.SuspendLayout();
-            this.GbxBotonesPoligonos.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.NumPY)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.NumPX)).BeginInit();
-            this.GbxHerramientasPain.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.TrackLapizTamano)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BtnSalirT1)).BeginInit();
+            this.GbxHerramientasPain.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.TrackTamano)).BeginInit();
+            this.GbxBotonesPoligonos.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.NumPX)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NumPY)).BeginInit();
             this.panel2.SuspendLayout();
             this.GbxBotonesMandel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.NumFactalIteracion)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.NumAlto2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.NumAlto1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.NumAncho2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.NumAncho1)).BeginInit();
             this.GbxBotonesFiguras.SuspendLayout();
-            this.TabPracticas.SuspendLayout();
-            this.TabMandelBrot.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.PbxMandalaLienzo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PbxGeneral)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.DarkOliveGreen;
-            this.panel1.Controls.Add(this.GbxBotonesPoligonos);
-            this.panel1.Controls.Add(this.GbxHerramientasPain);
             this.panel1.Controls.Add(this.LbSalirT1);
             this.panel1.Controls.Add(this.BtnSalirT1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1207, 120);
+            this.panel1.Size = new System.Drawing.Size(1904, 120);
             this.panel1.TabIndex = 0;
-            // 
-            // GbxBotonesPoligonos
-            // 
-            this.GbxBotonesPoligonos.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.GbxBotonesPoligonos.Controls.Add(this.NumPY);
-            this.GbxBotonesPoligonos.Controls.Add(this.NumPX);
-            this.GbxBotonesPoligonos.Controls.Add(this.BtnDibujarPoligono);
-            this.GbxBotonesPoligonos.ForeColor = System.Drawing.Color.White;
-            this.GbxBotonesPoligonos.Location = new System.Drawing.Point(512, 12);
-            this.GbxBotonesPoligonos.Name = "GbxBotonesPoligonos";
-            this.GbxBotonesPoligonos.Size = new System.Drawing.Size(223, 88);
-            this.GbxBotonesPoligonos.TabIndex = 23;
-            this.GbxBotonesPoligonos.TabStop = false;
-            this.GbxBotonesPoligonos.Text = "Poligonos";
-            // 
-            // NumPY
-            // 
-            this.NumPY.Location = new System.Drawing.Point(133, 17);
-            this.NumPY.Maximum = new decimal(new int[] {
-            1000,
-            0,
-            0,
-            0});
-            this.NumPY.Name = "NumPY";
-            this.NumPY.Size = new System.Drawing.Size(71, 24);
-            this.NumPY.TabIndex = 9;
-            this.NumPY.Value = new decimal(new int[] {
-            400,
-            0,
-            0,
-            0});
-            // 
-            // NumPX
-            // 
-            this.NumPX.Location = new System.Drawing.Point(133, 52);
-            this.NumPX.Maximum = new decimal(new int[] {
-            1000,
-            0,
-            0,
-            0});
-            this.NumPX.Name = "NumPX";
-            this.NumPX.Size = new System.Drawing.Size(71, 24);
-            this.NumPX.TabIndex = 8;
-            this.NumPX.Value = new decimal(new int[] {
-            400,
-            0,
-            0,
-            0});
-            // 
-            // BtnDibujarPoligono
-            // 
-            this.BtnDibujarPoligono.BackColor = System.Drawing.Color.Transparent;
-            this.BtnDibujarPoligono.ForeColor = System.Drawing.Color.Black;
-            this.BtnDibujarPoligono.Location = new System.Drawing.Point(14, 27);
-            this.BtnDibujarPoligono.Name = "BtnDibujarPoligono";
-            this.BtnDibujarPoligono.Size = new System.Drawing.Size(112, 49);
-            this.BtnDibujarPoligono.TabIndex = 8;
-            this.BtnDibujarPoligono.Text = "Crear";
-            this.BtnDibujarPoligono.UseVisualStyleBackColor = false;
-            this.BtnDibujarPoligono.Click += new System.EventHandler(this.BtnDibujarPoligono_Click);
-            // 
-            // GbxHerramientasPain
-            // 
-            this.GbxHerramientasPain.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.GbxHerramientasPain.Controls.Add(this.BtnExportar);
-            this.GbxHerramientasPain.Controls.Add(this.BtnCirculo);
-            this.GbxHerramientasPain.Controls.Add(this.BtnTriangulo);
-            this.GbxHerramientasPain.Controls.Add(this.TrackLapizTamano);
-            this.GbxHerramientasPain.Controls.Add(this.BtnRectangulo);
-            this.GbxHerramientasPain.Controls.Add(this.BtnBorrador);
-            this.GbxHerramientasPain.Controls.Add(this.BtnLapiz);
-            this.GbxHerramientasPain.ForeColor = System.Drawing.Color.White;
-            this.GbxHerramientasPain.Location = new System.Drawing.Point(12, 12);
-            this.GbxHerramientasPain.Name = "GbxHerramientasPain";
-            this.GbxHerramientasPain.Size = new System.Drawing.Size(494, 88);
-            this.GbxHerramientasPain.TabIndex = 22;
-            this.GbxHerramientasPain.TabStop = false;
-            this.GbxHerramientasPain.Text = "Herramientas";
-            // 
-            // BtnExportar
-            // 
-            this.BtnExportar.AutoSize = true;
-            this.BtnExportar.BackColor = System.Drawing.Color.Transparent;
-            this.BtnExportar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.BtnExportar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.BtnExportar.ForeColor = System.Drawing.SystemColors.Window;
-            this.BtnExportar.Image = ((System.Drawing.Image)(resources.GetObject("BtnExportar.Image")));
-            this.BtnExportar.Location = new System.Drawing.Point(437, 34);
-            this.BtnExportar.Margin = new System.Windows.Forms.Padding(1);
-            this.BtnExportar.Name = "BtnExportar";
-            this.BtnExportar.Size = new System.Drawing.Size(40, 40);
-            this.BtnExportar.TabIndex = 5;
-            this.BtnExportar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.BtnExportar.UseVisualStyleBackColor = false;
-            this.BtnExportar.Click += new System.EventHandler(this.BtnExportar_Click);
-            // 
-            // BtnCirculo
-            // 
-            this.BtnCirculo.AutoSize = true;
-            this.BtnCirculo.BackColor = System.Drawing.Color.Transparent;
-            this.BtnCirculo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.BtnCirculo.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.BtnCirculo.ForeColor = System.Drawing.SystemColors.Window;
-            this.BtnCirculo.Image = ((System.Drawing.Image)(resources.GetObject("BtnCirculo.Image")));
-            this.BtnCirculo.Location = new System.Drawing.Point(334, 34);
-            this.BtnCirculo.Margin = new System.Windows.Forms.Padding(1);
-            this.BtnCirculo.Name = "BtnCirculo";
-            this.BtnCirculo.Size = new System.Drawing.Size(40, 40);
-            this.BtnCirculo.TabIndex = 4;
-            this.BtnCirculo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.BtnCirculo.UseVisualStyleBackColor = false;
-            this.BtnCirculo.Click += new System.EventHandler(this.BtnCirculo_Click);
-            // 
-            // BtnTriangulo
-            // 
-            this.BtnTriangulo.AutoSize = true;
-            this.BtnTriangulo.BackColor = System.Drawing.Color.Transparent;
-            this.BtnTriangulo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.BtnTriangulo.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.BtnTriangulo.ForeColor = System.Drawing.SystemColors.Window;
-            this.BtnTriangulo.Image = ((System.Drawing.Image)(resources.GetObject("BtnTriangulo.Image")));
-            this.BtnTriangulo.Location = new System.Drawing.Point(376, 34);
-            this.BtnTriangulo.Margin = new System.Windows.Forms.Padding(1);
-            this.BtnTriangulo.Name = "BtnTriangulo";
-            this.BtnTriangulo.Size = new System.Drawing.Size(40, 40);
-            this.BtnTriangulo.TabIndex = 3;
-            this.BtnTriangulo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.BtnTriangulo.UseVisualStyleBackColor = false;
-            this.BtnTriangulo.Click += new System.EventHandler(this.BtnTriangulo_Click);
-            // 
-            // TrackLapizTamano
-            // 
-            this.TrackLapizTamano.Location = new System.Drawing.Point(59, 27);
-            this.TrackLapizTamano.Maximum = 15;
-            this.TrackLapizTamano.Minimum = 1;
-            this.TrackLapizTamano.Name = "TrackLapizTamano";
-            this.TrackLapizTamano.Size = new System.Drawing.Size(169, 45);
-            this.TrackLapizTamano.TabIndex = 0;
-            this.TrackLapizTamano.Value = 1;
-            // 
-            // BtnRectangulo
-            // 
-            this.BtnRectangulo.AutoSize = true;
-            this.BtnRectangulo.BackColor = System.Drawing.Color.Transparent;
-            this.BtnRectangulo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.BtnRectangulo.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.BtnRectangulo.ForeColor = System.Drawing.SystemColors.Window;
-            this.BtnRectangulo.Image = ((System.Drawing.Image)(resources.GetObject("BtnRectangulo.Image")));
-            this.BtnRectangulo.Location = new System.Drawing.Point(292, 34);
-            this.BtnRectangulo.Margin = new System.Windows.Forms.Padding(1);
-            this.BtnRectangulo.Name = "BtnRectangulo";
-            this.BtnRectangulo.Size = new System.Drawing.Size(40, 40);
-            this.BtnRectangulo.TabIndex = 2;
-            this.BtnRectangulo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.BtnRectangulo.UseVisualStyleBackColor = false;
-            this.BtnRectangulo.Click += new System.EventHandler(this.BtnRectangulo_Click);
-            // 
-            // BtnBorrador
-            // 
-            this.BtnBorrador.AutoSize = true;
-            this.BtnBorrador.BackColor = System.Drawing.Color.Transparent;
-            this.BtnBorrador.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.BtnBorrador.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.BtnBorrador.ForeColor = System.Drawing.SystemColors.Window;
-            this.BtnBorrador.Image = ((System.Drawing.Image)(resources.GetObject("BtnBorrador.Image")));
-            this.BtnBorrador.Location = new System.Drawing.Point(232, 34);
-            this.BtnBorrador.Margin = new System.Windows.Forms.Padding(1);
-            this.BtnBorrador.Name = "BtnBorrador";
-            this.BtnBorrador.Size = new System.Drawing.Size(40, 40);
-            this.BtnBorrador.TabIndex = 1;
-            this.BtnBorrador.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.BtnBorrador.UseVisualStyleBackColor = false;
-            this.BtnBorrador.Click += new System.EventHandler(this.BtnBorrador_Click);
-            // 
-            // BtnLapiz
-            // 
-            this.BtnLapiz.AutoSize = true;
-            this.BtnLapiz.BackColor = System.Drawing.Color.Transparent;
-            this.BtnLapiz.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.BtnLapiz.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.BtnLapiz.ForeColor = System.Drawing.SystemColors.Window;
-            this.BtnLapiz.Image = ((System.Drawing.Image)(resources.GetObject("BtnLapiz.Image")));
-            this.BtnLapiz.Location = new System.Drawing.Point(15, 34);
-            this.BtnLapiz.Margin = new System.Windows.Forms.Padding(1);
-            this.BtnLapiz.Name = "BtnLapiz";
-            this.BtnLapiz.Size = new System.Drawing.Size(40, 40);
-            this.BtnLapiz.TabIndex = 0;
-            this.BtnLapiz.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.BtnLapiz.UseVisualStyleBackColor = false;
-            this.BtnLapiz.Click += new System.EventHandler(this.BtnLapiz_Click);
             // 
             // LbSalirT1
             // 
@@ -301,7 +89,7 @@
             this.LbSalirT1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.LbSalirT1.Font = new System.Drawing.Font("Pokemon Classic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LbSalirT1.ForeColor = System.Drawing.Color.White;
-            this.LbSalirT1.Location = new System.Drawing.Point(1059, 42);
+            this.LbSalirT1.Location = new System.Drawing.Point(1752, 47);
             this.LbSalirT1.Name = "LbSalirT1";
             this.LbSalirT1.Size = new System.Drawing.Size(92, 31);
             this.LbSalirT1.TabIndex = 21;
@@ -315,7 +103,7 @@
             this.BtnSalirT1.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.BtnSalirT1.BackColor = System.Drawing.Color.Transparent;
             this.BtnSalirT1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.BtnSalirT1.Location = new System.Drawing.Point(979, 21);
+            this.BtnSalirT1.Location = new System.Drawing.Point(1676, 21);
             this.BtnSalirT1.Name = "BtnSalirT1";
             this.BtnSalirT1.Size = new System.Drawing.Size(216, 79);
             this.BtnSalirT1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -325,52 +113,223 @@
             this.BtnSalirT1.MouseEnter += new System.EventHandler(this.BtnSalirT1_MouseEnter);
             this.BtnSalirT1.MouseLeave += new System.EventHandler(this.BtnSalirT1_MouseLeave);
             // 
+            // GbxHerramientasPain
+            // 
+            this.GbxHerramientasPain.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.GbxHerramientasPain.Controls.Add(this.LbTamano);
+            this.GbxHerramientasPain.Controls.Add(this.TrackTamano);
+            this.GbxHerramientasPain.Controls.Add(this.BtnBorrador);
+            this.GbxHerramientasPain.Controls.Add(this.BtnExportar);
+            this.GbxHerramientasPain.Controls.Add(this.BtnLapiz);
+            this.GbxHerramientasPain.ForeColor = System.Drawing.Color.White;
+            this.GbxHerramientasPain.Location = new System.Drawing.Point(12, 566);
+            this.GbxHerramientasPain.Name = "GbxHerramientasPain";
+            this.GbxHerramientasPain.Size = new System.Drawing.Size(150, 142);
+            this.GbxHerramientasPain.TabIndex = 22;
+            this.GbxHerramientasPain.TabStop = false;
+            this.GbxHerramientasPain.Text = "Herramientas";
+            // 
+            // LbTamano
+            // 
+            this.LbTamano.AutoSize = true;
+            this.LbTamano.ForeColor = System.Drawing.Color.White;
+            this.LbTamano.Location = new System.Drawing.Point(5, 80);
+            this.LbTamano.Name = "LbTamano";
+            this.LbTamano.Size = new System.Drawing.Size(76, 18);
+            this.LbTamano.TabIndex = 12;
+            this.LbTamano.Text = "Tamaño";
+            this.LbTamano.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // TrackTamano
+            // 
+            this.TrackTamano.Location = new System.Drawing.Point(6, 101);
+            this.TrackTamano.Maximum = 15;
+            this.TrackTamano.Minimum = 1;
+            this.TrackTamano.Name = "TrackTamano";
+            this.TrackTamano.Size = new System.Drawing.Size(138, 45);
+            this.TrackTamano.TabIndex = 0;
+            this.TrackTamano.Value = 1;
+            // 
+            // BtnBorrador
+            // 
+            this.BtnBorrador.AutoSize = true;
+            this.BtnBorrador.BackColor = System.Drawing.Color.Transparent;
+            this.BtnBorrador.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.BtnBorrador.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnBorrador.ForeColor = System.Drawing.SystemColors.Window;
+            this.BtnBorrador.Image = ((System.Drawing.Image)(resources.GetObject("BtnBorrador.Image")));
+            this.BtnBorrador.Location = new System.Drawing.Point(56, 29);
+            this.BtnBorrador.Margin = new System.Windows.Forms.Padding(1);
+            this.BtnBorrador.Name = "BtnBorrador";
+            this.BtnBorrador.Size = new System.Drawing.Size(40, 40);
+            this.BtnBorrador.TabIndex = 1;
+            this.BtnBorrador.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.BtnBorrador.UseVisualStyleBackColor = false;
+            this.BtnBorrador.Click += new System.EventHandler(this.BtnBorrador_Click);
+            // 
+            // BtnExportar
+            // 
+            this.BtnExportar.AutoSize = true;
+            this.BtnExportar.BackColor = System.Drawing.Color.Transparent;
+            this.BtnExportar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.BtnExportar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnExportar.ForeColor = System.Drawing.SystemColors.Window;
+            this.BtnExportar.Image = ((System.Drawing.Image)(resources.GetObject("BtnExportar.Image")));
+            this.BtnExportar.Location = new System.Drawing.Point(98, 29);
+            this.BtnExportar.Margin = new System.Windows.Forms.Padding(1);
+            this.BtnExportar.Name = "BtnExportar";
+            this.BtnExportar.Size = new System.Drawing.Size(40, 40);
+            this.BtnExportar.TabIndex = 5;
+            this.BtnExportar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.BtnExportar.UseVisualStyleBackColor = false;
+            this.BtnExportar.Click += new System.EventHandler(this.BtnExportar_Click);
+            // 
+            // BtnLapiz
+            // 
+            this.BtnLapiz.AutoSize = true;
+            this.BtnLapiz.BackColor = System.Drawing.Color.Transparent;
+            this.BtnLapiz.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.BtnLapiz.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnLapiz.ForeColor = System.Drawing.SystemColors.Window;
+            this.BtnLapiz.Image = ((System.Drawing.Image)(resources.GetObject("BtnLapiz.Image")));
+            this.BtnLapiz.Location = new System.Drawing.Point(14, 29);
+            this.BtnLapiz.Margin = new System.Windows.Forms.Padding(1);
+            this.BtnLapiz.Name = "BtnLapiz";
+            this.BtnLapiz.Size = new System.Drawing.Size(40, 40);
+            this.BtnLapiz.TabIndex = 0;
+            this.BtnLapiz.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.BtnLapiz.UseVisualStyleBackColor = false;
+            this.BtnLapiz.Click += new System.EventHandler(this.BtnLapiz_Click);
+            // 
+            // GbxBotonesPoligonos
+            // 
+            this.GbxBotonesPoligonos.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.GbxBotonesPoligonos.Controls.Add(this.label5);
+            this.GbxBotonesPoligonos.Controls.Add(this.label4);
+            this.GbxBotonesPoligonos.Controls.Add(this.NumPX);
+            this.GbxBotonesPoligonos.Controls.Add(this.NumPY);
+            this.GbxBotonesPoligonos.Controls.Add(this.BtnDibujarPoligono);
+            this.GbxBotonesPoligonos.ForeColor = System.Drawing.Color.White;
+            this.GbxBotonesPoligonos.Location = new System.Drawing.Point(12, 383);
+            this.GbxBotonesPoligonos.Name = "GbxBotonesPoligonos";
+            this.GbxBotonesPoligonos.Size = new System.Drawing.Size(150, 142);
+            this.GbxBotonesPoligonos.TabIndex = 23;
+            this.GbxBotonesPoligonos.TabStop = false;
+            this.GbxBotonesPoligonos.Text = "Poligonos";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.Location = new System.Drawing.Point(99, 87);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(20, 18);
+            this.label5.TabIndex = 13;
+            this.label5.Text = "Y";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(29, 87);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(20, 18);
+            this.label4.TabIndex = 12;
+            this.label4.Text = "X";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // NumPX
+            // 
+            this.NumPX.Increment = new decimal(new int[] {
+            50,
+            0,
+            0,
+            0});
+            this.NumPX.Location = new System.Drawing.Point(8, 108);
+            this.NumPX.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+            this.NumPX.Name = "NumPX";
+            this.NumPX.Size = new System.Drawing.Size(64, 24);
+            this.NumPX.TabIndex = 8;
+            this.NumPX.Value = new decimal(new int[] {
+            400,
+            0,
+            0,
+            0});
+            this.NumPX.ValueChanged += new System.EventHandler(this.BtnDibujarPoligono_Click);
+            // 
+            // NumPY
+            // 
+            this.NumPY.Increment = new decimal(new int[] {
+            50,
+            0,
+            0,
+            0});
+            this.NumPY.Location = new System.Drawing.Point(78, 108);
+            this.NumPY.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+            this.NumPY.Name = "NumPY";
+            this.NumPY.Size = new System.Drawing.Size(64, 24);
+            this.NumPY.TabIndex = 9;
+            this.NumPY.Value = new decimal(new int[] {
+            400,
+            0,
+            0,
+            0});
+            this.NumPY.ValueChanged += new System.EventHandler(this.BtnDibujarPoligono_Click);
+            // 
+            // BtnDibujarPoligono
+            // 
+            this.BtnDibujarPoligono.BackColor = System.Drawing.Color.Transparent;
+            this.BtnDibujarPoligono.ForeColor = System.Drawing.Color.Black;
+            this.BtnDibujarPoligono.Location = new System.Drawing.Point(7, 23);
+            this.BtnDibujarPoligono.Name = "BtnDibujarPoligono";
+            this.BtnDibujarPoligono.Size = new System.Drawing.Size(138, 57);
+            this.BtnDibujarPoligono.TabIndex = 10;
+            this.BtnDibujarPoligono.Text = "Dibujar";
+            this.BtnDibujarPoligono.UseVisualStyleBackColor = false;
+            this.BtnDibujarPoligono.Click += new System.EventHandler(this.BtnDibujarPoligono_Click);
+            // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.OliveDrab;
+            this.panel2.Controls.Add(this.GbxHerramientasPain);
+            this.panel2.Controls.Add(this.GbxBotonesPoligonos);
             this.panel2.Controls.Add(this.GbxBotonesMandel);
             this.panel2.Controls.Add(this.GbxBotonesFiguras);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel2.Location = new System.Drawing.Point(0, 120);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(173, 606);
+            this.panel2.Size = new System.Drawing.Size(173, 921);
             this.panel2.TabIndex = 0;
             // 
             // GbxBotonesMandel
             // 
             this.GbxBotonesMandel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.GbxBotonesMandel.Controls.Add(this.BtnBorrar);
             this.GbxBotonesMandel.Controls.Add(this.NumFactalIteracion);
             this.GbxBotonesMandel.Controls.Add(this.label2);
             this.GbxBotonesMandel.Controls.Add(this.label1);
-            this.GbxBotonesMandel.Controls.Add(this.BtnMandelBrotExp);
             this.GbxBotonesMandel.Controls.Add(this.CbxPotencias);
-            this.GbxBotonesMandel.Controls.Add(this.NumAlto2);
-            this.GbxBotonesMandel.Controls.Add(this.NumAlto1);
             this.GbxBotonesMandel.Controls.Add(this.BtnMandelBrot);
-            this.GbxBotonesMandel.Controls.Add(this.NumAncho2);
-            this.GbxBotonesMandel.Controls.Add(this.NumAncho1);
             this.GbxBotonesMandel.ForeColor = System.Drawing.Color.White;
-            this.GbxBotonesMandel.Location = new System.Drawing.Point(12, 15);
+            this.GbxBotonesMandel.Location = new System.Drawing.Point(12, 7);
             this.GbxBotonesMandel.Name = "GbxBotonesMandel";
-            this.GbxBotonesMandel.Size = new System.Drawing.Size(150, 464);
+            this.GbxBotonesMandel.Size = new System.Drawing.Size(150, 201);
             this.GbxBotonesMandel.TabIndex = 23;
             this.GbxBotonesMandel.TabStop = false;
             this.GbxBotonesMandel.Text = "Mandel";
-            this.GbxBotonesMandel.Visible = false;
-            // 
-            // BtnBorrar
-            // 
-            this.BtnBorrar.BackColor = System.Drawing.Color.Transparent;
-            this.BtnBorrar.ForeColor = System.Drawing.Color.Black;
-            this.BtnBorrar.Location = new System.Drawing.Point(7, 416);
-            this.BtnBorrar.Name = "BtnBorrar";
-            this.BtnBorrar.Size = new System.Drawing.Size(138, 39);
-            this.BtnBorrar.TabIndex = 1;
-            this.BtnBorrar.Text = "Borrar";
-            this.BtnBorrar.UseVisualStyleBackColor = false;
-            this.BtnBorrar.Click += new System.EventHandler(this.BtnBorrar_Click);
             // 
             // NumFactalIteracion
             // 
@@ -379,7 +338,7 @@
             0,
             0,
             0});
-            this.NumFactalIteracion.Location = new System.Drawing.Point(7, 256);
+            this.NumFactalIteracion.Location = new System.Drawing.Point(6, 113);
             this.NumFactalIteracion.Maximum = new decimal(new int[] {
             5000,
             0,
@@ -402,7 +361,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(7, 293);
+            this.label2.Location = new System.Drawing.Point(7, 144);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(88, 18);
             this.label2.TabIndex = 9;
@@ -411,215 +370,94 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(7, 232);
+            this.label1.Location = new System.Drawing.Point(6, 89);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(119, 18);
             this.label1.TabIndex = 8;
             this.label1.Text = "Iteraciones";
             // 
-            // BtnMandelBrotExp
-            // 
-            this.BtnMandelBrotExp.BackColor = System.Drawing.Color.Transparent;
-            this.BtnMandelBrotExp.ForeColor = System.Drawing.Color.Black;
-            this.BtnMandelBrotExp.Location = new System.Drawing.Point(7, 353);
-            this.BtnMandelBrotExp.Name = "BtnMandelBrotExp";
-            this.BtnMandelBrotExp.Size = new System.Drawing.Size(138, 57);
-            this.BtnMandelBrotExp.TabIndex = 7;
-            this.BtnMandelBrotExp.Text = "Factal Expe";
-            this.BtnMandelBrotExp.UseVisualStyleBackColor = false;
-            this.BtnMandelBrotExp.Click += new System.EventHandler(this.BtnMandelBrotExp_Click);
-            // 
             // CbxPotencias
             // 
             this.CbxPotencias.FormattingEnabled = true;
-            this.CbxPotencias.Location = new System.Drawing.Point(6, 317);
+            this.CbxPotencias.Location = new System.Drawing.Point(6, 168);
             this.CbxPotencias.Name = "CbxPotencias";
             this.CbxPotencias.Size = new System.Drawing.Size(138, 25);
             this.CbxPotencias.TabIndex = 6;
-            // 
-            // NumAlto2
-            // 
-            this.NumAlto2.DecimalPlaces = 1;
-            this.NumAlto2.Location = new System.Drawing.Point(6, 196);
-            this.NumAlto2.Name = "NumAlto2";
-            this.NumAlto2.Size = new System.Drawing.Size(138, 24);
-            this.NumAlto2.TabIndex = 5;
-            this.NumAlto2.Value = new decimal(new int[] {
-            23,
-            0,
-            0,
-            65536});
-            // 
-            // NumAlto1
-            // 
-            this.NumAlto1.DecimalPlaces = 1;
-            this.NumAlto1.Location = new System.Drawing.Point(6, 161);
-            this.NumAlto1.Name = "NumAlto1";
-            this.NumAlto1.Size = new System.Drawing.Size(138, 24);
-            this.NumAlto1.TabIndex = 4;
-            this.NumAlto1.Value = new decimal(new int[] {
-            20,
-            0,
-            0,
-            65536});
             // 
             // BtnMandelBrot
             // 
             this.BtnMandelBrot.BackColor = System.Drawing.Color.Transparent;
             this.BtnMandelBrot.ForeColor = System.Drawing.Color.Black;
-            this.BtnMandelBrot.Location = new System.Drawing.Point(6, 28);
+            this.BtnMandelBrot.Location = new System.Drawing.Point(6, 23);
             this.BtnMandelBrot.Name = "BtnMandelBrot";
             this.BtnMandelBrot.Size = new System.Drawing.Size(138, 57);
             this.BtnMandelBrot.TabIndex = 0;
-            this.BtnMandelBrot.Text = "Mandel Broot";
+            this.BtnMandelBrot.Text = "Dibujar Factal";
             this.BtnMandelBrot.UseVisualStyleBackColor = false;
             this.BtnMandelBrot.Click += new System.EventHandler(this.BtnMandelBrot_Click);
-            // 
-            // NumAncho2
-            // 
-            this.NumAncho2.DecimalPlaces = 1;
-            this.NumAncho2.Location = new System.Drawing.Point(6, 126);
-            this.NumAncho2.Name = "NumAncho2";
-            this.NumAncho2.Size = new System.Drawing.Size(138, 24);
-            this.NumAncho2.TabIndex = 3;
-            this.NumAncho2.Value = new decimal(new int[] {
-            25,
-            0,
-            0,
-            65536});
-            // 
-            // NumAncho1
-            // 
-            this.NumAncho1.DecimalPlaces = 1;
-            this.NumAncho1.Location = new System.Drawing.Point(6, 91);
-            this.NumAncho1.Name = "NumAncho1";
-            this.NumAncho1.Size = new System.Drawing.Size(138, 24);
-            this.NumAncho1.TabIndex = 2;
-            this.NumAncho1.Value = new decimal(new int[] {
-            13,
-            0,
-            0,
-            65536});
             // 
             // GbxBotonesFiguras
             // 
             this.GbxBotonesFiguras.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.GbxBotonesFiguras.Controls.Add(this.label3);
             this.GbxBotonesFiguras.Controls.Add(this.LbCambioModo);
-            this.GbxBotonesFiguras.Controls.Add(this.BtnBorrarRectangulos);
             this.GbxBotonesFiguras.ForeColor = System.Drawing.Color.White;
-            this.GbxBotonesFiguras.Location = new System.Drawing.Point(12, 485);
+            this.GbxBotonesFiguras.Location = new System.Drawing.Point(12, 239);
             this.GbxBotonesFiguras.Name = "GbxBotonesFiguras";
-            this.GbxBotonesFiguras.Size = new System.Drawing.Size(150, 109);
+            this.GbxBotonesFiguras.Size = new System.Drawing.Size(150, 102);
             this.GbxBotonesFiguras.TabIndex = 24;
             this.GbxBotonesFiguras.TabStop = false;
             this.GbxBotonesFiguras.Text = "Figuras";
+            this.GbxBotonesFiguras.Enter += new System.EventHandler(this.GbxBotonesFiguras_Enter);
+            this.GbxBotonesFiguras.MouseHover += new System.EventHandler(this.GbxBotonesFiguras_Enter);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(22, 31);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(59, 18);
+            this.label3.TabIndex = 11;
+            this.label3.Text = "Modo:";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label3.MouseEnter += new System.EventHandler(this.GbxBotonesFiguras_Enter);
             // 
             // LbCambioModo
             // 
             this.LbCambioModo.AutoSize = true;
             this.LbCambioModo.ForeColor = System.Drawing.Color.White;
-            this.LbCambioModo.Location = new System.Drawing.Point(11, 29);
+            this.LbCambioModo.Location = new System.Drawing.Point(22, 58);
             this.LbCambioModo.Name = "LbCambioModo";
             this.LbCambioModo.Size = new System.Drawing.Size(103, 18);
             this.LbCambioModo.TabIndex = 10;
             this.LbCambioModo.Text = "Una figura";
             this.LbCambioModo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.LbCambioModo.MouseEnter += new System.EventHandler(this.GbxBotonesFiguras_Enter);
             // 
-            // BtnBorrarRectangulos
+            // PbxGeneral
             // 
-            this.BtnBorrarRectangulos.BackColor = System.Drawing.Color.Transparent;
-            this.BtnBorrarRectangulos.ForeColor = System.Drawing.Color.Black;
-            this.BtnBorrarRectangulos.Location = new System.Drawing.Point(6, 55);
-            this.BtnBorrarRectangulos.Name = "BtnBorrarRectangulos";
-            this.BtnBorrarRectangulos.Size = new System.Drawing.Size(138, 39);
-            this.BtnBorrarRectangulos.TabIndex = 10;
-            this.BtnBorrarRectangulos.Text = "Borrar";
-            this.BtnBorrarRectangulos.UseVisualStyleBackColor = false;
-            this.BtnBorrarRectangulos.Click += new System.EventHandler(this.BtnBorrarRectangulos_Click);
-            // 
-            // TabPracticas
-            // 
-            this.TabPracticas.Controls.Add(this.TabFiguras);
-            this.TabPracticas.Controls.Add(this.TabMandelBrot);
-            this.TabPracticas.Controls.Add(this.TabPaint);
-            this.TabPracticas.Controls.Add(this.TabPoligonos);
-            this.TabPracticas.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.TabPracticas.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.TabPracticas.Location = new System.Drawing.Point(173, 120);
-            this.TabPracticas.Multiline = true;
-            this.TabPracticas.Name = "TabPracticas";
-            this.TabPracticas.SelectedIndex = 0;
-            this.TabPracticas.Size = new System.Drawing.Size(1034, 606);
-            this.TabPracticas.TabIndex = 1;
-            this.TabPracticas.SelectedIndexChanged += new System.EventHandler(this.TabPracticas_SelectedIndexChanged);
-            // 
-            // TabFiguras
-            // 
-            this.TabFiguras.BackColor = System.Drawing.Color.White;
-            this.TabFiguras.Location = new System.Drawing.Point(4, 26);
-            this.TabFiguras.Name = "TabFiguras";
-            this.TabFiguras.Padding = new System.Windows.Forms.Padding(3);
-            this.TabFiguras.Size = new System.Drawing.Size(1026, 576);
-            this.TabFiguras.TabIndex = 0;
-            this.TabFiguras.Text = "Figuras";
-            this.TabFiguras.MouseClick += new System.Windows.Forms.MouseEventHandler(this.TabFiguras_MouseClick);
-            this.TabFiguras.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.TabFiguras_MouseDoubleClick);
-            this.TabFiguras.MouseMove += new System.Windows.Forms.MouseEventHandler(this.PnlPintar_MouseMove);
-            // 
-            // TabMandelBrot
-            // 
-            this.TabMandelBrot.BackColor = System.Drawing.Color.White;
-            this.TabMandelBrot.Controls.Add(this.PbxMandalaLienzo);
-            this.TabMandelBrot.Location = new System.Drawing.Point(4, 26);
-            this.TabMandelBrot.Name = "TabMandelBrot";
-            this.TabMandelBrot.Padding = new System.Windows.Forms.Padding(3);
-            this.TabMandelBrot.Size = new System.Drawing.Size(1026, 576);
-            this.TabMandelBrot.TabIndex = 1;
-            this.TabMandelBrot.Text = "MandelBrot";
-            // 
-            // PbxMandalaLienzo
-            // 
-            this.PbxMandalaLienzo.BackColor = System.Drawing.Color.Transparent;
-            this.PbxMandalaLienzo.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.PbxMandalaLienzo.Location = new System.Drawing.Point(3, 3);
-            this.PbxMandalaLienzo.Name = "PbxMandalaLienzo";
-            this.PbxMandalaLienzo.Size = new System.Drawing.Size(1020, 570);
-            this.PbxMandalaLienzo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.PbxMandalaLienzo.TabIndex = 0;
-            this.PbxMandalaLienzo.TabStop = false;
-            // 
-            // TabPaint
-            // 
-            this.TabPaint.Cursor = System.Windows.Forms.Cursors.Default;
-            this.TabPaint.Location = new System.Drawing.Point(4, 26);
-            this.TabPaint.Name = "TabPaint";
-            this.TabPaint.Padding = new System.Windows.Forms.Padding(3);
-            this.TabPaint.Size = new System.Drawing.Size(1026, 576);
-            this.TabPaint.TabIndex = 2;
-            this.TabPaint.Text = "Paint";
-            this.TabPaint.UseVisualStyleBackColor = true;
-            this.TabPaint.MouseDown += new System.Windows.Forms.MouseEventHandler(this.TabPaint_MouseDown);
-            this.TabPaint.MouseMove += new System.Windows.Forms.MouseEventHandler(this.TabPaint_MouseMove);
-            this.TabPaint.MouseUp += new System.Windows.Forms.MouseEventHandler(this.TabPaint_MouseUp);
-            // 
-            // TabPoligonos
-            // 
-            this.TabPoligonos.Location = new System.Drawing.Point(4, 26);
-            this.TabPoligonos.Name = "TabPoligonos";
-            this.TabPoligonos.Padding = new System.Windows.Forms.Padding(3);
-            this.TabPoligonos.Size = new System.Drawing.Size(1026, 576);
-            this.TabPoligonos.TabIndex = 3;
-            this.TabPoligonos.Text = "Poligonos";
-            this.TabPoligonos.UseVisualStyleBackColor = true;
+            this.PbxGeneral.BackColor = System.Drawing.Color.White;
+            this.PbxGeneral.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.PbxGeneral.Location = new System.Drawing.Point(173, 120);
+            this.PbxGeneral.Name = "PbxGeneral";
+            this.PbxGeneral.Size = new System.Drawing.Size(1731, 921);
+            this.PbxGeneral.TabIndex = 1;
+            this.PbxGeneral.TabStop = false;
+            this.PbxGeneral.DoubleClick += new System.EventHandler(this.PbxGeneral_DoubleClick);
+            this.PbxGeneral.MouseClick += new System.Windows.Forms.MouseEventHandler(this.PbxGeneral_MouseClick);
+            this.PbxGeneral.MouseDown += new System.Windows.Forms.MouseEventHandler(this.PbxGeneral_MouseDown);
+            this.PbxGeneral.MouseMove += new System.Windows.Forms.MouseEventHandler(this.PbxGeneral_MouseMove);
+            this.PbxGeneral.MouseUp += new System.Windows.Forms.MouseEventHandler(this.PbxGeneral_MouseUp);
             // 
             // DlgTrabajo2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.YellowGreen;
-            this.ClientSize = new System.Drawing.Size(1207, 726);
-            this.Controls.Add(this.TabPracticas);
+            this.ClientSize = new System.Drawing.Size(1904, 1041);
+            this.Controls.Add(this.PbxGeneral);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Pokemon Classic", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -631,26 +469,21 @@
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.DlgTrabajo2_FormClosing);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.GbxBotonesPoligonos.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.NumPY)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.NumPX)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BtnSalirT1)).EndInit();
             this.GbxHerramientasPain.ResumeLayout(false);
             this.GbxHerramientasPain.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.TrackLapizTamano)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.BtnSalirT1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TrackTamano)).EndInit();
+            this.GbxBotonesPoligonos.ResumeLayout(false);
+            this.GbxBotonesPoligonos.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.NumPX)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NumPY)).EndInit();
             this.panel2.ResumeLayout(false);
             this.GbxBotonesMandel.ResumeLayout(false);
             this.GbxBotonesMandel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.NumFactalIteracion)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.NumAlto2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.NumAlto1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.NumAncho2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.NumAncho1)).EndInit();
             this.GbxBotonesFiguras.ResumeLayout(false);
             this.GbxBotonesFiguras.PerformLayout();
-            this.TabPracticas.ResumeLayout(false);
-            this.TabMandelBrot.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.PbxMandalaLienzo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PbxGeneral)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -662,37 +495,27 @@
         private System.Windows.Forms.PictureBox BtnSalirT1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button BtnMandelBrot;
-        private System.Windows.Forms.Button BtnBorrar;
-        private System.Windows.Forms.TabControl TabPracticas;
-        private System.Windows.Forms.TabPage TabFiguras;
-        private System.Windows.Forms.TabPage TabMandelBrot;
-        private System.Windows.Forms.PictureBox PbxMandalaLienzo;
         private System.Windows.Forms.GroupBox GbxHerramientasPain;
-        private System.Windows.Forms.TabPage TabPaint;
-        private System.Windows.Forms.NumericUpDown NumAncho1;
-        private System.Windows.Forms.NumericUpDown NumAlto2;
-        private System.Windows.Forms.NumericUpDown NumAlto1;
-        private System.Windows.Forms.NumericUpDown NumAncho2;
         private System.Windows.Forms.GroupBox GbxBotonesMandel;
         private System.Windows.Forms.Button BtnLapiz;
         private System.Windows.Forms.Button BtnBorrador;
-        private System.Windows.Forms.Button BtnRectangulo;
-        private System.Windows.Forms.TrackBar TrackLapizTamano;
-        private System.Windows.Forms.Button BtnCirculo;
-        private System.Windows.Forms.Button BtnTriangulo;
+        private System.Windows.Forms.TrackBar TrackTamano;
         private System.Windows.Forms.Button BtnExportar;
         private System.Windows.Forms.ComboBox CbxPotencias;
-        private System.Windows.Forms.Button BtnMandelBrotExp;
-        private System.Windows.Forms.TabPage TabPoligonos;
-        private System.Windows.Forms.Button BtnDibujarPoligono;
         private System.Windows.Forms.GroupBox GbxBotonesPoligonos;
         private System.Windows.Forms.NumericUpDown NumPY;
         private System.Windows.Forms.NumericUpDown NumPX;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.NumericUpDown NumFactalIteracion;
-        private System.Windows.Forms.Button BtnBorrarRectangulos;
         private System.Windows.Forms.GroupBox GbxBotonesFiguras;
         private System.Windows.Forms.Label LbCambioModo;
+        private System.Windows.Forms.PictureBox PbxGeneral;
+        private System.Windows.Forms.Button BtnDibujarPoligono;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label LbTamano;
+        private System.Windows.Forms.SaveFileDialog saveFileDialog;
     }
 }
