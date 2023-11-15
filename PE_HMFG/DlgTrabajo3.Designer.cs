@@ -93,7 +93,7 @@
             this.PnlArriba.Dock = System.Windows.Forms.DockStyle.Top;
             this.PnlArriba.Location = new System.Drawing.Point(0, 0);
             this.PnlArriba.Name = "PnlArriba";
-            this.PnlArriba.Size = new System.Drawing.Size(1904, 133);
+            this.PnlArriba.Size = new System.Drawing.Size(1575, 101);
             this.PnlArriba.TabIndex = 0;
             // 
             // LbSalirT1
@@ -117,7 +117,7 @@
             this.BtnSalirT1.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.BtnSalirT1.BackColor = System.Drawing.Color.Transparent;
             this.BtnSalirT1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.BtnSalirT1.Location = new System.Drawing.Point(1658, 25);
+            this.BtnSalirT1.Location = new System.Drawing.Point(1342, 11);
             this.BtnSalirT1.Name = "BtnSalirT1";
             this.BtnSalirT1.Size = new System.Drawing.Size(216, 79);
             this.BtnSalirT1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -131,7 +131,7 @@
             // 
             this.NomPersona.AutoSize = true;
             this.NomPersona.ForeColor = System.Drawing.Color.White;
-            this.NomPersona.Location = new System.Drawing.Point(175, 81);
+            this.NomPersona.Location = new System.Drawing.Point(175, 64);
             this.NomPersona.Name = "NomPersona";
             this.NomPersona.Size = new System.Drawing.Size(26, 18);
             this.NomPersona.TabIndex = 4;
@@ -141,7 +141,7 @@
             // 
             this.NomUbicacion.AutoSize = true;
             this.NomUbicacion.ForeColor = System.Drawing.Color.White;
-            this.NomUbicacion.Location = new System.Drawing.Point(175, 58);
+            this.NomUbicacion.Location = new System.Drawing.Point(175, 41);
             this.NomUbicacion.Name = "NomUbicacion";
             this.NomUbicacion.Size = new System.Drawing.Size(26, 18);
             this.NomUbicacion.TabIndex = 3;
@@ -151,7 +151,7 @@
             // 
             this.NomProyecto.AutoSize = true;
             this.NomProyecto.ForeColor = System.Drawing.Color.White;
-            this.NomProyecto.Location = new System.Drawing.Point(175, 35);
+            this.NomProyecto.Location = new System.Drawing.Point(175, 18);
             this.NomProyecto.Name = "NomProyecto";
             this.NomProyecto.Size = new System.Drawing.Size(26, 18);
             this.NomProyecto.TabIndex = 2;
@@ -165,16 +165,18 @@
             this.PnlIzquierda.Controls.Add(this.GbxTabla);
             this.PnlIzquierda.Controls.Add(this.GbxOpcionesDibujo);
             this.PnlIzquierda.Dock = System.Windows.Forms.DockStyle.Left;
-            this.PnlIzquierda.Location = new System.Drawing.Point(0, 133);
+            this.PnlIzquierda.Location = new System.Drawing.Point(0, 101);
             this.PnlIzquierda.Name = "PnlIzquierda";
-            this.PnlIzquierda.Size = new System.Drawing.Size(171, 908);
+            this.PnlIzquierda.Size = new System.Drawing.Size(171, 743);
             this.PnlIzquierda.TabIndex = 0;
             // 
             // CheckMostrarTabla
             // 
+            this.CheckMostrarTabla.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.CheckMostrarTabla.AutoSize = true;
             this.CheckMostrarTabla.ForeColor = System.Drawing.Color.White;
-            this.CheckMostrarTabla.Location = new System.Drawing.Point(33, 18);
+            this.CheckMostrarTabla.Location = new System.Drawing.Point(33, 6);
             this.CheckMostrarTabla.Name = "CheckMostrarTabla";
             this.CheckMostrarTabla.Size = new System.Drawing.Size(104, 40);
             this.CheckMostrarTabla.TabIndex = 2;
@@ -185,13 +187,15 @@
             // 
             // GbxImagen
             // 
+            this.GbxImagen.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.GbxImagen.Controls.Add(this.BtnBorrarDibujo);
             this.GbxImagen.Controls.Add(this.BtnExportImagen);
             this.GbxImagen.Controls.Add(this.BtnDibujarCordenadas);
             this.GbxImagen.ForeColor = System.Drawing.Color.White;
-            this.GbxImagen.Location = new System.Drawing.Point(3, 259);
+            this.GbxImagen.Location = new System.Drawing.Point(3, 201);
             this.GbxImagen.Name = "GbxImagen";
-            this.GbxImagen.Size = new System.Drawing.Size(165, 252);
+            this.GbxImagen.Size = new System.Drawing.Size(165, 201);
             this.GbxImagen.TabIndex = 1;
             this.GbxImagen.TabStop = false;
             this.GbxImagen.Text = "Dibujar";
@@ -199,9 +203,9 @@
             // BtnBorrarDibujo
             // 
             this.BtnBorrarDibujo.ForeColor = System.Drawing.Color.Black;
-            this.BtnBorrarDibujo.Location = new System.Drawing.Point(6, 175);
+            this.BtnBorrarDibujo.Location = new System.Drawing.Point(6, 139);
             this.BtnBorrarDibujo.Name = "BtnBorrarDibujo";
-            this.BtnBorrarDibujo.Size = new System.Drawing.Size(153, 70);
+            this.BtnBorrarDibujo.Size = new System.Drawing.Size(153, 52);
             this.BtnBorrarDibujo.TabIndex = 4;
             this.BtnBorrarDibujo.Text = "Borrar Dibujo";
             this.BtnBorrarDibujo.UseVisualStyleBackColor = true;
@@ -210,9 +214,9 @@
             // BtnExportImagen
             // 
             this.BtnExportImagen.ForeColor = System.Drawing.Color.Black;
-            this.BtnExportImagen.Location = new System.Drawing.Point(6, 99);
+            this.BtnExportImagen.Location = new System.Drawing.Point(6, 81);
             this.BtnExportImagen.Name = "BtnExportImagen";
-            this.BtnExportImagen.Size = new System.Drawing.Size(153, 70);
+            this.BtnExportImagen.Size = new System.Drawing.Size(153, 52);
             this.BtnExportImagen.TabIndex = 3;
             this.BtnExportImagen.Text = "Exportar Imagen";
             this.BtnExportImagen.UseVisualStyleBackColor = true;
@@ -223,7 +227,7 @@
             this.BtnDibujarCordenadas.ForeColor = System.Drawing.Color.Black;
             this.BtnDibujarCordenadas.Location = new System.Drawing.Point(6, 23);
             this.BtnDibujarCordenadas.Name = "BtnDibujarCordenadas";
-            this.BtnDibujarCordenadas.Size = new System.Drawing.Size(153, 70);
+            this.BtnDibujarCordenadas.Size = new System.Drawing.Size(153, 52);
             this.BtnDibujarCordenadas.TabIndex = 2;
             this.BtnDibujarCordenadas.Text = "Dibujar Cordenadas";
             this.BtnDibujarCordenadas.UseVisualStyleBackColor = true;
@@ -231,12 +235,14 @@
             // 
             // GbxTabla
             // 
+            this.GbxTabla.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.GbxTabla.Controls.Add(this.BtnBorrar);
             this.GbxTabla.Controls.Add(this.BtnImportarExcel);
             this.GbxTabla.ForeColor = System.Drawing.Color.White;
-            this.GbxTabla.Location = new System.Drawing.Point(3, 77);
+            this.GbxTabla.Location = new System.Drawing.Point(3, 52);
             this.GbxTabla.Name = "GbxTabla";
-            this.GbxTabla.Size = new System.Drawing.Size(165, 176);
+            this.GbxTabla.Size = new System.Drawing.Size(165, 143);
             this.GbxTabla.TabIndex = 0;
             this.GbxTabla.TabStop = false;
             this.GbxTabla.Text = "Tabla OPS";
@@ -244,9 +250,9 @@
             // BtnBorrar
             // 
             this.BtnBorrar.ForeColor = System.Drawing.Color.Black;
-            this.BtnBorrar.Location = new System.Drawing.Point(6, 99);
+            this.BtnBorrar.Location = new System.Drawing.Point(6, 81);
             this.BtnBorrar.Name = "BtnBorrar";
-            this.BtnBorrar.Size = new System.Drawing.Size(153, 70);
+            this.BtnBorrar.Size = new System.Drawing.Size(153, 52);
             this.BtnBorrar.TabIndex = 1;
             this.BtnBorrar.Text = "Borrar Tabla";
             this.BtnBorrar.UseVisualStyleBackColor = true;
@@ -257,7 +263,7 @@
             this.BtnImportarExcel.ForeColor = System.Drawing.Color.Black;
             this.BtnImportarExcel.Location = new System.Drawing.Point(6, 23);
             this.BtnImportarExcel.Name = "BtnImportarExcel";
-            this.BtnImportarExcel.Size = new System.Drawing.Size(153, 70);
+            this.BtnImportarExcel.Size = new System.Drawing.Size(153, 52);
             this.BtnImportarExcel.TabIndex = 0;
             this.BtnImportarExcel.Text = "Importar Excel";
             this.BtnImportarExcel.UseVisualStyleBackColor = true;
@@ -265,6 +271,8 @@
             // 
             // GbxOpcionesDibujo
             // 
+            this.GbxOpcionesDibujo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.GbxOpcionesDibujo.Controls.Add(this.label7);
             this.GbxOpcionesDibujo.Controls.Add(this.TamanoDibujo);
             this.GbxOpcionesDibujo.Controls.Add(this.checkBrujula);
@@ -280,9 +288,9 @@
             this.GbxOpcionesDibujo.Controls.Add(this.TamanoLapiz);
             this.GbxOpcionesDibujo.Controls.Add(this.BtnColorLinea);
             this.GbxOpcionesDibujo.ForeColor = System.Drawing.Color.White;
-            this.GbxOpcionesDibujo.Location = new System.Drawing.Point(3, 517);
+            this.GbxOpcionesDibujo.Location = new System.Drawing.Point(3, 408);
             this.GbxOpcionesDibujo.Name = "GbxOpcionesDibujo";
-            this.GbxOpcionesDibujo.Size = new System.Drawing.Size(165, 353);
+            this.GbxOpcionesDibujo.Size = new System.Drawing.Size(165, 326);
             this.GbxOpcionesDibujo.TabIndex = 8;
             this.GbxOpcionesDibujo.TabStop = false;
             this.GbxOpcionesDibujo.Text = "Configuracion";
@@ -290,7 +298,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(13, 228);
+            this.label7.Location = new System.Drawing.Point(13, 220);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(141, 18);
             this.label7.TabIndex = 15;
@@ -298,7 +306,7 @@
             // 
             // TamanoDibujo
             // 
-            this.TamanoDibujo.Location = new System.Drawing.Point(6, 250);
+            this.TamanoDibujo.Location = new System.Drawing.Point(6, 242);
             this.TamanoDibujo.Maximum = 100;
             this.TamanoDibujo.Minimum = 1;
             this.TamanoDibujo.Name = "TamanoDibujo";
@@ -311,7 +319,7 @@
             // 
             this.checkBrujula.AutoSize = true;
             this.checkBrujula.ForeColor = System.Drawing.Color.White;
-            this.checkBrujula.Location = new System.Drawing.Point(30, 301);
+            this.checkBrujula.Location = new System.Drawing.Point(30, 282);
             this.checkBrujula.Name = "checkBrujula";
             this.checkBrujula.Size = new System.Drawing.Size(104, 40);
             this.checkBrujula.TabIndex = 9;
@@ -323,7 +331,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(107, 109);
+            this.label6.Location = new System.Drawing.Point(107, 104);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(20, 18);
             this.label6.TabIndex = 13;
@@ -332,7 +340,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(39, 109);
+            this.label5.Location = new System.Drawing.Point(39, 104);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(20, 18);
             this.label5.TabIndex = 12;
@@ -341,7 +349,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(45, 86);
+            this.label4.Location = new System.Drawing.Point(45, 82);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(82, 18);
             this.label4.TabIndex = 11;
@@ -354,7 +362,7 @@
             0,
             0,
             0});
-            this.NumX.Location = new System.Drawing.Point(12, 131);
+            this.NumX.Location = new System.Drawing.Point(12, 126);
             this.NumX.Maximum = new decimal(new int[] {
             1250,
             0,
@@ -373,7 +381,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(17, 168);
+            this.label3.Location = new System.Drawing.Point(17, 160);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(134, 18);
             this.label3.TabIndex = 10;
@@ -404,7 +412,7 @@
             0,
             0,
             0});
-            this.NumY.Location = new System.Drawing.Point(84, 131);
+            this.NumY.Location = new System.Drawing.Point(84, 126);
             this.NumY.Maximum = new decimal(new int[] {
             700,
             0,
@@ -432,7 +440,7 @@
             // 
             // TamanoLapiz
             // 
-            this.TamanoLapiz.Location = new System.Drawing.Point(6, 190);
+            this.TamanoLapiz.Location = new System.Drawing.Point(6, 182);
             this.TamanoLapiz.Maximum = 11;
             this.TamanoLapiz.Minimum = 1;
             this.TamanoLapiz.Name = "TamanoLapiz";
@@ -457,9 +465,9 @@
             this.PnlCentral.Controls.Add(this.DgvCuadroConstruccion);
             this.PnlCentral.Controls.Add(this.PbxPlano);
             this.PnlCentral.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.PnlCentral.Location = new System.Drawing.Point(171, 133);
+            this.PnlCentral.Location = new System.Drawing.Point(171, 101);
             this.PnlCentral.Name = "PnlCentral";
-            this.PnlCentral.Size = new System.Drawing.Size(1733, 908);
+            this.PnlCentral.Size = new System.Drawing.Size(1404, 743);
             this.PnlCentral.TabIndex = 2;
             // 
             // DgvCuadroConstruccion
@@ -474,12 +482,12 @@
             this.ColX,
             this.ColY});
             this.DgvCuadroConstruccion.Dock = System.Windows.Forms.DockStyle.Right;
-            this.DgvCuadroConstruccion.Location = new System.Drawing.Point(1332, 0);
+            this.DgvCuadroConstruccion.Location = new System.Drawing.Point(1005, 0);
             this.DgvCuadroConstruccion.Margin = new System.Windows.Forms.Padding(10);
             this.DgvCuadroConstruccion.Name = "DgvCuadroConstruccion";
             this.DgvCuadroConstruccion.RowHeadersWidth = 51;
             this.DgvCuadroConstruccion.RowTemplate.Height = 24;
-            this.DgvCuadroConstruccion.Size = new System.Drawing.Size(401, 908);
+            this.DgvCuadroConstruccion.Size = new System.Drawing.Size(399, 743);
             this.DgvCuadroConstruccion.TabIndex = 0;
             // 
             // Vector
@@ -513,7 +521,7 @@
             this.PbxPlano.Location = new System.Drawing.Point(0, 0);
             this.PbxPlano.Margin = new System.Windows.Forms.Padding(10);
             this.PbxPlano.Name = "PbxPlano";
-            this.PbxPlano.Size = new System.Drawing.Size(1733, 908);
+            this.PbxPlano.Size = new System.Drawing.Size(1404, 743);
             this.PbxPlano.TabIndex = 1;
             this.PbxPlano.TabStop = false;
             // 
@@ -523,10 +531,10 @@
             // 
             // DlgTrabajo3
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 17F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(1904, 1041);
+            this.AutoSize = true;
+            this.ClientSize = new System.Drawing.Size(1575, 844);
             this.Controls.Add(this.PnlCentral);
             this.Controls.Add(this.PnlIzquierda);
             this.Controls.Add(this.PnlArriba);

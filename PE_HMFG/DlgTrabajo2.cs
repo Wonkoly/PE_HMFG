@@ -330,5 +330,10 @@ namespace PE_HMFG
             ToolTip tooltip = new ToolTip();
             tooltip.SetToolTip(GbxBotonesFiguras, "Doble click para cambiar de Modo.");
         }
+
+        private void LbCambioModo_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

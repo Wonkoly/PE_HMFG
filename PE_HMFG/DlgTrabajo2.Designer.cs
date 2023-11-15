@@ -115,18 +115,15 @@
             // 
             // GbxHerramientasPain
             // 
-            this.GbxHerramientasPain.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.GbxHerramientasPain.Controls.Add(this.LbTamano);
             this.GbxHerramientasPain.Controls.Add(this.TrackTamano);
             this.GbxHerramientasPain.Controls.Add(this.BtnBorrador);
             this.GbxHerramientasPain.Controls.Add(this.BtnExportar);
             this.GbxHerramientasPain.Controls.Add(this.BtnLapiz);
             this.GbxHerramientasPain.ForeColor = System.Drawing.Color.White;
-            this.GbxHerramientasPain.Location = new System.Drawing.Point(12, 566);
+            this.GbxHerramientasPain.Location = new System.Drawing.Point(6, 469);
             this.GbxHerramientasPain.Name = "GbxHerramientasPain";
-            this.GbxHerramientasPain.Size = new System.Drawing.Size(150, 142);
+            this.GbxHerramientasPain.Size = new System.Drawing.Size(164, 146);
             this.GbxHerramientasPain.TabIndex = 22;
             this.GbxHerramientasPain.TabStop = false;
             this.GbxHerramientasPain.Text = "Herramientas";
@@ -135,7 +132,7 @@
             // 
             this.LbTamano.AutoSize = true;
             this.LbTamano.ForeColor = System.Drawing.Color.White;
-            this.LbTamano.Location = new System.Drawing.Point(5, 80);
+            this.LbTamano.Location = new System.Drawing.Point(19, 75);
             this.LbTamano.Name = "LbTamano";
             this.LbTamano.Size = new System.Drawing.Size(76, 18);
             this.LbTamano.TabIndex = 12;
@@ -144,11 +141,11 @@
             // 
             // TrackTamano
             // 
-            this.TrackTamano.Location = new System.Drawing.Point(6, 101);
+            this.TrackTamano.Location = new System.Drawing.Point(6, 97);
             this.TrackTamano.Maximum = 15;
             this.TrackTamano.Minimum = 1;
             this.TrackTamano.Name = "TrackTamano";
-            this.TrackTamano.Size = new System.Drawing.Size(138, 45);
+            this.TrackTamano.Size = new System.Drawing.Size(152, 45);
             this.TrackTamano.TabIndex = 0;
             this.TrackTamano.Value = 1;
             // 
@@ -160,7 +157,7 @@
             this.BtnBorrador.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BtnBorrador.ForeColor = System.Drawing.SystemColors.Window;
             this.BtnBorrador.Image = ((System.Drawing.Image)(resources.GetObject("BtnBorrador.Image")));
-            this.BtnBorrador.Location = new System.Drawing.Point(56, 29);
+            this.BtnBorrador.Location = new System.Drawing.Point(64, 29);
             this.BtnBorrador.Margin = new System.Windows.Forms.Padding(1);
             this.BtnBorrador.Name = "BtnBorrador";
             this.BtnBorrador.Size = new System.Drawing.Size(40, 40);
@@ -177,7 +174,7 @@
             this.BtnExportar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BtnExportar.ForeColor = System.Drawing.SystemColors.Window;
             this.BtnExportar.Image = ((System.Drawing.Image)(resources.GetObject("BtnExportar.Image")));
-            this.BtnExportar.Location = new System.Drawing.Point(98, 29);
+            this.BtnExportar.Location = new System.Drawing.Point(118, 29);
             this.BtnExportar.Margin = new System.Windows.Forms.Padding(1);
             this.BtnExportar.Name = "BtnExportar";
             this.BtnExportar.Size = new System.Drawing.Size(40, 40);
@@ -194,7 +191,7 @@
             this.BtnLapiz.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BtnLapiz.ForeColor = System.Drawing.SystemColors.Window;
             this.BtnLapiz.Image = ((System.Drawing.Image)(resources.GetObject("BtnLapiz.Image")));
-            this.BtnLapiz.Location = new System.Drawing.Point(14, 29);
+            this.BtnLapiz.Location = new System.Drawing.Point(8, 29);
             this.BtnLapiz.Margin = new System.Windows.Forms.Padding(1);
             this.BtnLapiz.Name = "BtnLapiz";
             this.BtnLapiz.Size = new System.Drawing.Size(40, 40);
@@ -205,18 +202,15 @@
             // 
             // GbxBotonesPoligonos
             // 
-            this.GbxBotonesPoligonos.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.GbxBotonesPoligonos.Controls.Add(this.label5);
             this.GbxBotonesPoligonos.Controls.Add(this.label4);
             this.GbxBotonesPoligonos.Controls.Add(this.NumPX);
             this.GbxBotonesPoligonos.Controls.Add(this.NumPY);
             this.GbxBotonesPoligonos.Controls.Add(this.BtnDibujarPoligono);
             this.GbxBotonesPoligonos.ForeColor = System.Drawing.Color.White;
-            this.GbxBotonesPoligonos.Location = new System.Drawing.Point(12, 383);
+            this.GbxBotonesPoligonos.Location = new System.Drawing.Point(8, 321);
             this.GbxBotonesPoligonos.Name = "GbxBotonesPoligonos";
-            this.GbxBotonesPoligonos.Size = new System.Drawing.Size(150, 142);
+            this.GbxBotonesPoligonos.Size = new System.Drawing.Size(164, 142);
             this.GbxBotonesPoligonos.TabIndex = 23;
             this.GbxBotonesPoligonos.TabStop = false;
             this.GbxBotonesPoligonos.Text = "Poligonos";
@@ -225,7 +219,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(99, 87);
+            this.label5.Location = new System.Drawing.Point(111, 87);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(20, 18);
             this.label5.TabIndex = 13;
@@ -236,7 +230,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(29, 87);
+            this.label4.Location = new System.Drawing.Point(35, 87);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(20, 18);
             this.label4.TabIndex = 12;
@@ -257,7 +251,7 @@
             0,
             0});
             this.NumPX.Name = "NumPX";
-            this.NumPX.Size = new System.Drawing.Size(64, 24);
+            this.NumPX.Size = new System.Drawing.Size(73, 24);
             this.NumPX.TabIndex = 8;
             this.NumPX.Value = new decimal(new int[] {
             400,
@@ -273,14 +267,14 @@
             0,
             0,
             0});
-            this.NumPY.Location = new System.Drawing.Point(78, 108);
+            this.NumPY.Location = new System.Drawing.Point(85, 108);
             this.NumPY.Maximum = new decimal(new int[] {
             1000,
             0,
             0,
             0});
             this.NumPY.Name = "NumPY";
-            this.NumPY.Size = new System.Drawing.Size(64, 24);
+            this.NumPY.Size = new System.Drawing.Size(73, 24);
             this.NumPY.TabIndex = 9;
             this.NumPY.Value = new decimal(new int[] {
             400,
@@ -295,7 +289,7 @@
             this.BtnDibujarPoligono.ForeColor = System.Drawing.Color.Black;
             this.BtnDibujarPoligono.Location = new System.Drawing.Point(7, 23);
             this.BtnDibujarPoligono.Name = "BtnDibujarPoligono";
-            this.BtnDibujarPoligono.Size = new System.Drawing.Size(138, 57);
+            this.BtnDibujarPoligono.Size = new System.Drawing.Size(151, 57);
             this.BtnDibujarPoligono.TabIndex = 10;
             this.BtnDibujarPoligono.Text = "Dibujar";
             this.BtnDibujarPoligono.UseVisualStyleBackColor = false;
@@ -311,22 +305,20 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel2.Location = new System.Drawing.Point(0, 120);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(173, 921);
+            this.panel2.Size = new System.Drawing.Size(178, 921);
             this.panel2.TabIndex = 0;
             // 
             // GbxBotonesMandel
             // 
-            this.GbxBotonesMandel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.GbxBotonesMandel.Controls.Add(this.NumFactalIteracion);
             this.GbxBotonesMandel.Controls.Add(this.label2);
             this.GbxBotonesMandel.Controls.Add(this.label1);
             this.GbxBotonesMandel.Controls.Add(this.CbxPotencias);
             this.GbxBotonesMandel.Controls.Add(this.BtnMandelBrot);
             this.GbxBotonesMandel.ForeColor = System.Drawing.Color.White;
-            this.GbxBotonesMandel.Location = new System.Drawing.Point(12, 7);
+            this.GbxBotonesMandel.Location = new System.Drawing.Point(6, 6);
             this.GbxBotonesMandel.Name = "GbxBotonesMandel";
-            this.GbxBotonesMandel.Size = new System.Drawing.Size(150, 201);
+            this.GbxBotonesMandel.Size = new System.Drawing.Size(164, 201);
             this.GbxBotonesMandel.TabIndex = 23;
             this.GbxBotonesMandel.TabStop = false;
             this.GbxBotonesMandel.Text = "Mandel";
@@ -350,7 +342,7 @@
             0,
             0});
             this.NumFactalIteracion.Name = "NumFactalIteracion";
-            this.NumFactalIteracion.Size = new System.Drawing.Size(138, 24);
+            this.NumFactalIteracion.Size = new System.Drawing.Size(152, 24);
             this.NumFactalIteracion.TabIndex = 0;
             this.NumFactalIteracion.Value = new decimal(new int[] {
             1000,
@@ -381,7 +373,7 @@
             this.CbxPotencias.FormattingEnabled = true;
             this.CbxPotencias.Location = new System.Drawing.Point(6, 168);
             this.CbxPotencias.Name = "CbxPotencias";
-            this.CbxPotencias.Size = new System.Drawing.Size(138, 25);
+            this.CbxPotencias.Size = new System.Drawing.Size(152, 25);
             this.CbxPotencias.TabIndex = 6;
             // 
             // BtnMandelBrot
@@ -390,7 +382,7 @@
             this.BtnMandelBrot.ForeColor = System.Drawing.Color.Black;
             this.BtnMandelBrot.Location = new System.Drawing.Point(6, 23);
             this.BtnMandelBrot.Name = "BtnMandelBrot";
-            this.BtnMandelBrot.Size = new System.Drawing.Size(138, 57);
+            this.BtnMandelBrot.Size = new System.Drawing.Size(152, 57);
             this.BtnMandelBrot.TabIndex = 0;
             this.BtnMandelBrot.Text = "Dibujar Factal";
             this.BtnMandelBrot.UseVisualStyleBackColor = false;
@@ -398,14 +390,12 @@
             // 
             // GbxBotonesFiguras
             // 
-            this.GbxBotonesFiguras.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.GbxBotonesFiguras.Controls.Add(this.label3);
             this.GbxBotonesFiguras.Controls.Add(this.LbCambioModo);
             this.GbxBotonesFiguras.ForeColor = System.Drawing.Color.White;
-            this.GbxBotonesFiguras.Location = new System.Drawing.Point(12, 239);
+            this.GbxBotonesFiguras.Location = new System.Drawing.Point(8, 213);
             this.GbxBotonesFiguras.Name = "GbxBotonesFiguras";
-            this.GbxBotonesFiguras.Size = new System.Drawing.Size(150, 102);
+            this.GbxBotonesFiguras.Size = new System.Drawing.Size(164, 102);
             this.GbxBotonesFiguras.TabIndex = 24;
             this.GbxBotonesFiguras.TabStop = false;
             this.GbxBotonesFiguras.Text = "Figuras";
@@ -416,7 +406,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(22, 31);
+            this.label3.Location = new System.Drawing.Point(53, 30);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(59, 18);
             this.label3.TabIndex = 11;
@@ -428,21 +418,22 @@
             // 
             this.LbCambioModo.AutoSize = true;
             this.LbCambioModo.ForeColor = System.Drawing.Color.White;
-            this.LbCambioModo.Location = new System.Drawing.Point(22, 58);
+            this.LbCambioModo.Location = new System.Drawing.Point(29, 59);
             this.LbCambioModo.Name = "LbCambioModo";
             this.LbCambioModo.Size = new System.Drawing.Size(103, 18);
             this.LbCambioModo.TabIndex = 10;
             this.LbCambioModo.Text = "Una figura";
             this.LbCambioModo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.LbCambioModo.Click += new System.EventHandler(this.LbCambioModo_Click);
             this.LbCambioModo.MouseEnter += new System.EventHandler(this.GbxBotonesFiguras_Enter);
             // 
             // PbxGeneral
             // 
             this.PbxGeneral.BackColor = System.Drawing.Color.White;
             this.PbxGeneral.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.PbxGeneral.Location = new System.Drawing.Point(173, 120);
+            this.PbxGeneral.Location = new System.Drawing.Point(178, 120);
             this.PbxGeneral.Name = "PbxGeneral";
-            this.PbxGeneral.Size = new System.Drawing.Size(1731, 921);
+            this.PbxGeneral.Size = new System.Drawing.Size(1726, 921);
             this.PbxGeneral.TabIndex = 1;
             this.PbxGeneral.TabStop = false;
             this.PbxGeneral.DoubleClick += new System.EventHandler(this.PbxGeneral_DoubleClick);
@@ -453,8 +444,7 @@
             // 
             // DlgTrabajo2
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 17F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.YellowGreen;
             this.ClientSize = new System.Drawing.Size(1904, 1041);
             this.Controls.Add(this.PbxGeneral);
